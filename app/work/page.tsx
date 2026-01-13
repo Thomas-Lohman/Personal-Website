@@ -1,254 +1,82 @@
-type Project = {
-  title: string;
-  description: string;
-  bullets: string[];
-  tech: string[];
-  links?: { label: string; href: string }[];
-  featured?: boolean;
-};
+import SectionHeader from "@/components/work/SectionHeader";
+import ProjectCard from "@/components/work/ProjectCard";
+import ExperienceRow from "@/components/work/ExperienceRow";
+import TeachingCard from "@/components/work/TeachingCard";
 
-type Experience = {
-  role: string;
-  org: string;
-  dates: string;
-  description?: string;
-  bullets: string[];
-  tech?: string[];
-};
-
-type TeachingItem = {
-  title: string;
-  org: string;
-  dates: string;
-  description: string;
-  bullets: string[];
-  topics?: string[];
-  tech?: string[];
-  featured?: boolean;
-};
-
-function SectionHeader({
-  title,
-  subtitle,
-}: {
-  title: string;
-  subtitle?: string;
-}) {
-  return (
-    <header className="space-y-2">
-      <h2 className="text-2xl font-semibold tracking-tight">{title}</h2>
-      {subtitle ? <p className="opacity-80 max-w-3xl">{subtitle}</p> : null}
-    </header>
-  );
-}
-
-function TagRow({ tags }: { tags: string[] }) {
-  return (
-    <div className="mt-4 flex flex-wrap gap-2">
-      {tags.map((t) => (
-        <span
-          key={t}
-          className="rounded-full border px-2.5 py-1 text-xs opacity-80"
-        >
-          {t}
-        </span>
-      ))}
-    </div>
-  );
-}
-
-function Card({
-  children,
-  featured,
-}: {
-  children: React.ReactNode;
-  featured?: boolean;
-}) {
-  return (
-    <article
-      className={[
-        "rounded-2xl border p-6 shadow-sm transition",
-        "hover:-translate-y-0.5 hover:shadow-md",
-        featured ? "border-foreground/30 bg-foreground/5" : "",
-      ].join(" ")}
-    >
-      {children}
-    </article>
-  );
-}
-
-function FeaturedBadge({ text }: { text: string }) {
-  return (
-    <div className="inline-flex rounded-full border px-2.5 py-1 text-xs font-medium opacity-90">
-      {text}
-    </div>
-  );
-}
-
-function ProjectCard({ project }: { project: Project }) {
-  return (
-    <Card featured={project.featured}>
-      <div className="space-y-2">
-        {project.featured ? (
-          <FeaturedBadge text="Featured" />
-        ) : null}
-
-        <h3 className="text-lg font-semibold">{project.title}</h3>
-        <p className="opacity-80">{project.description}</p>
-      </div>
-
-      {project.bullets?.length ? (
-        <ul className="mt-4 list-disc space-y-1 pl-5 opacity-80">
-          {project.bullets.map((b) => (
-            <li key={b}>{b}</li>
-          ))}
-        </ul>
-      ) : null}
-
-      {project.tech?.length ? <TagRow tags={project.tech} /> : null}
-
-      {project.links?.length ? (
-        <div className="mt-4 flex flex-wrap gap-3 text-sm">
-          {project.links.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              className="underline underline-offset-4 opacity-90 hover:opacity-100"
-              target="_blank"
-              rel="noreferrer"
-            >
-              {l.label}
-            </a>
-          ))}
-        </div>
-      ) : null}
-    </Card>
-  );
-}
-
-function ExperienceRow({ exp }: { exp: Experience }) {
-  return (
-    <div className="rounded-2xl border p-6">
-      <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
-        <h3 className="text-lg font-semibold">
-          {exp.role} <span className="opacity-70">— {exp.org}</span>
-        </h3>
-        <div className="text-sm opacity-70">{exp.dates}</div>
-      </div>
-
-      {exp.description ? <p className="mt-3 opacity-80">{exp.description}</p> : null}
-
-      <ul className="mt-4 list-disc space-y-1 pl-5 opacity-80">
-        {exp.bullets.map((b) => (
-          <li key={b}>{b}</li>
-        ))}
-      </ul>
-
-      {exp.tech?.length ? <TagRow tags={exp.tech} /> : null}
-    </div>
-  );
-}
-
-function TeachingCard({ item }: { item: TeachingItem }) {
-  return (
-    <Card featured={item.featured}>
-      <div className="space-y-2">
-        {item.featured ? (
-          <FeaturedBadge text="Featured Teaching Work" />
-        ) : null}
-
-        <h3 className="text-lg font-semibold">{item.title}</h3>
-
-        <div className="text-sm opacity-70">
-          {item.org} • {item.dates}
-        </div>
-
-        <p className="opacity-80">{item.description}</p>
-      </div>
-
-      <ul className="mt-4 list-disc space-y-1 pl-5 opacity-80">
-        {item.bullets.map((b) => (
-          <li key={b}>{b}</li>
-        ))}
-      </ul>
-
-      {item.topics?.length ? (
-        <div className="mt-4">
-          <div className="text-sm font-medium opacity-90">Topics</div>
-          <div className="mt-2 flex flex-wrap gap-2">
-            {item.topics.map((t) => (
-              <span
-                key={t}
-                className="rounded-full border px-2.5 py-1 text-xs opacity-80"
-              >
-                {t}
-              </span>
-            ))}
-          </div>
-        </div>
-      ) : null}
-
-      {item.tech?.length ? <TagRow tags={item.tech} /> : null}
-    </Card>
-  );
-}
+import type { Experience, Project, TeachingItem } from "@/components/work/types";
 
 export default function WorkPage() {
-  // ---- Replace these placeholders with your real content ----
+  // ---- Selected Projects (filled) ----
   const projects: Project[] = [
     {
-      title: "Language Learning Multi-Agent Tutor",
+      title: "Multi-Agent AI System for Effective Language Learning",
       description:
-        "A level-aware conversational tutor with constrained decoding, translation support, and visual grounding.",
+        "A multi-agent language learning system with an LLM conversational agent, real-time translation, and lightweight image generation for immersive practice.",
       bullets: [
-        "Built a constrained-decoding interaction loop tailored to beginner Spanish.",
-        "Designed an evaluation pipeline to measure language correctness and coherence.",
-        "Integrated lightweight image generation to visualize conversational context.",
+        "Designed a multi-agent workflow combining conversation, translation, and image generation to simulate context-rich language practice.",
+        "Implemented constrained decoding via adaptive logit biasing to keep responses aligned with a target proficiency level.",
+        "Built a structured prompting + generation loop to maintain coherence across turns while enforcing level constraints.",
       ],
-      tech: ["Python", "LLMs", "Constrained Decoding", "Evaluation"],
+      tech: [
+        "Python",
+        "LLMs",
+        "Constrained Decoding",
+        "Logit Biasing",
+        "Multi-Agent",
+        "Translation Pipeline",
+        "Image Generation",
+      ],
       links: [
-        // { label: "GitHub", href: "https://github.com/..." },
-        // { label: "Demo", href: "https://..." },
+        // { label: "GitHub", href: "https://github.com/Thomas-Lohman/REPO" },
       ],
-      featured: true,
     },
     {
-      title: "March Madness Advanced Analytics",
+      title: "March Madness Analytics Project",
       description:
-        "A full-stack analytics dashboard for matchup insights, modeling, and interactive exploration.",
+        "An analytics project for exploring NCAA tournament matchups with data-driven features and interactive analysis views.",
       bullets: [
-        "Designed a data model for teams, games, and features.",
-        "Built interactive views for matchup comparisons and summaries.",
+        "Built a pipeline to structure and analyze team/game data for matchup comparisons and tournament insights.",
+        "Designed statistical features to summarize team strength, style differences, and historical performance trends.",
+        "Created interactive views to explore predictions, what-if scenarios, and interpretable team comparisons.",
       ],
-      tech: ["Next.js", "React", "Database", "Analytics"],
+      tech: ["Python", "Pandas", "Statistics", "Data Visualization", "Analytics"],
+      links: [
+        // { label: "GitHub", href: "https://github.com/Thomas-Lohman/REPO" },
+      ],
     },
     {
-      title: "Abstract Art Understanding",
+      title: "WorNDle — Multilingual Wordle Web Application",
       description:
-        "VLM/LLM experiments aligning emotion classification with explanation quality on abstract artworks.",
+        "A full-stack, multilingual Wordle-style web game with authentication, persistent user history, and API-driven purchases for extra plays.",
       bullets: [
-        "Benchmarked models across 0/1/2/4-shot prompting setups.",
-        "Evaluated explanation alignment against human annotations.",
+        "Developed a multilingual Wordle-style game supporting five languages with a daily play limit (up to three games/day) and persistent user history.",
+        "Implemented core gameplay logic in Python and JavaScript and built a personalized user page for viewing game history.",
+        "Integrated RESTful APIs to support secure purchases of additional plays from a remote server and update access in real time.",
+        "Used Django authentication to handle secure signup/login flows, verification, and reliable session management.",
       ],
-      tech: ["VLMs", "ICL", "Embeddings", "Metrics"],
+      tech: ["Django", "Python", "JavaScript", "Bootstrap", "SQLite", "REST APIs", "Auth"],
+      links: [
+        // { label: "GitHub", href: "https://github.com/Thomas-Lohman/REPO" },
+      ],
     },
   ];
 
+  // ---- Internships & Jobs (placeholder) ----
   const experience: Experience[] = [
     {
       role: "Intern / Job Title",
       org: "Company or Organization",
       dates: "Month YYYY — Month YYYY",
-      description:
-        "One-line scope: what team/problem area you worked on (optional).",
+      description: "One-line scope (optional).",
       bullets: [
-        "Impact bullet #1 (start with a verb: Built/Improved/Automated/etc.).",
+        "Impact bullet #1 (Built/Improved/Automated...).",
         "Impact bullet #2 (include numbers if you have them).",
       ],
-      tech: ["Python", "SQL", "AWS (optional)"],
+      tech: ["Python", "SQL", "Cloud (optional)"],
     },
   ];
 
+  // ---- Teaching (placeholder; Intro to AI highlighted) ----
   const teaching: TeachingItem[] = [
     {
       title: "Intro to AI — ML Visualization & Instructional Notebooks",
@@ -273,34 +101,26 @@ export default function WorkPage() {
       tech: ["Python", "Jupyter", "Google Colab", "PyTorch", "NumPy", "Matplotlib"],
       featured: true,
     },
-    // Add other teaching roles here if you want:
-    // {
-    //   title: "Teaching Role / Course",
-    //   org: "Institution",
-    //   dates: "Month YYYY — Month YYYY",
-    //   description: "Short description.",
-    //   bullets: ["Bullet 1", "Bullet 2"],
-    // },
   ];
 
   return (
     <section className="space-y-14">
-      {/* Page header */}
       <header className="space-y-3">
         <h1 className="text-3xl font-bold">Work</h1>
         <p className="opacity-80 max-w-3xl">
-          A selection of projects, experience, and teaching work. For research-focused work,
-          see the <a className="underline underline-offset-4" href="/research">Research</a> page.
+          A selection of projects, experience, and teaching work. For research-focused work, see the{" "}
+          <a className="underline underline-offset-4" href="/research">
+            Research
+          </a>{" "}
+          page.
         </p>
       </header>
 
-      {/* Selected Projects */}
       <section className="space-y-6">
         <SectionHeader
           title="Selected Projects"
           subtitle="A few projects I’m most proud of—focused on ML systems, evaluation, and usable tools."
         />
-
         <div className="grid gap-4 sm:grid-cols-2">
           {projects.map((p) => (
             <ProjectCard key={p.title} project={p} />
@@ -308,13 +128,11 @@ export default function WorkPage() {
         </div>
       </section>
 
-      {/* Internships & Jobs */}
       <section className="space-y-6">
         <SectionHeader
           title="Internships & Jobs"
           subtitle="Roles where I collaborated with others and shipped work under real constraints."
         />
-
         <div className="space-y-4">
           {experience.map((e) => (
             <ExperienceRow key={`${e.role}-${e.org}-${e.dates}`} exp={e} />
@@ -322,13 +140,11 @@ export default function WorkPage() {
         </div>
       </section>
 
-      {/* Teaching */}
       <section className="space-y-6">
         <SectionHeader
           title="Teaching"
           subtitle="Teaching roles where I built technical materials and helped students learn core AI concepts."
         />
-
         <div className="grid gap-4">
           {teaching.map((t) => (
             <TeachingCard key={`${t.title}-${t.org}-${t.dates}`} item={t} />
@@ -336,7 +152,6 @@ export default function WorkPage() {
         </div>
       </section>
 
-      {/* Footer CTA */}
       <footer className="flex flex-wrap gap-3 pt-4">
         <a
           href="/resume"
@@ -354,5 +169,4 @@ export default function WorkPage() {
     </section>
   );
 }
-
 
