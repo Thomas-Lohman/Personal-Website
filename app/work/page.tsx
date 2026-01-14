@@ -121,7 +121,12 @@ export default function WorkPage() {
           title="Selected Projects"
           subtitle="A few projects I’m most proud of—focused on ML systems, evaluation, and usable tools."
         />
-        <div className="grid gap-4 sm:grid-cols-2">
+        <div
+          className={
+            "grid gap-6"
+            // + " sm:grid-cols-2"   // ← old two-column layout
+          }
+        >
           {projects.map((p) => (
             <ProjectCard key={p.title} project={p} />
           ))}
