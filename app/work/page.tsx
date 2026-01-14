@@ -61,46 +61,93 @@ export default function WorkPage() {
     },
   ];
 
-  // ---- Internships & Jobs (placeholder) ----
+  // ---- Internships & Jobs ----
   const experience: Experience[] = [
-    {
-      role: "Intern / Job Title",
-      org: "Company or Organization",
-      dates: "Month YYYY — Month YYYY",
-      description: "One-line scope (optional).",
-      bullets: [
-        "Impact bullet #1 (Built/Improved/Automated...).",
-        "Impact bullet #2 (include numbers if you have them).",
-      ],
-      tech: ["Python", "SQL", "Cloud (optional)"],
-    },
+  {
+    role: "Data Scientist",
+    org: "DroneResponse",
+    dates: "Jan 2026 — May 2026",
+    description:
+      "Applied data science work focused on building and improving data-driven decision support.",
+    bullets: [
+      "Developed and evaluated data-driven methods to support business and operational decision-making.",
+      "Collaborated with stakeholders to translate requirements into measurable modeling objectives and deliverables.",
+    ],
+    tech: [
+      "Python (optional)",
+      "Pandas (optional)",
+      "Modeling (optional)",
+      "Data Analysis (optional)",
+    ],
+  },
+  {
+    role: "Data Science Intern",
+    org: "1st Source Bank",
+    dates: "Jan 2024 — Jul 2024",
+    description:
+      "Customer analytics and classification using 15+ years of historical customer data.",
+    bullets: [
+      "Developed new methods to classify the bank’s primary customers using 15+ years of customer data.",
+      "Built a logistic regression model to predict primary-customer classification, achieving 85%+ test accuracy.",
+      "Performed feature engineering and validation to improve model stability and interpretability.",
+    ],
+    tech: ["Python", "Pandas", "scikit-learn", "SQL (optional)", "Logistic Regression"],
+  },
+  {
+    role: "Technical Market Analyst Intern",
+    org: "Idea Center, University of Notre Dame",
+    dates: "Jan 2024 — Jul 2024",
+    description:
+      "Market research and commercialization support for university research and technology transfer efforts.",
+    bullets: [
+      "Conducted market research to identify commercialization opportunities for faculty research and IP.",
+      "Created and presented reports summarizing market size, competitive landscape, and actionable recommendations.",
+      "Synthesized technical and business considerations into clear narratives for decision-makers.",
+    ],
+    tech: ["Market Research", "Competitive Analysis", "Technical Writing", "Presentations"],
+  },
   ];
 
   // ---- Teaching (placeholder; Intro to AI highlighted) ----
   const teaching: TeachingItem[] = [
-    {
-      title: "Intro to AI — ML Visualization & Instructional Notebooks",
-      org: "University of Notre Dame",
-      dates: "Teaching Assistant • 2 years",
-      description:
-        "Developed Jupyter/Colab notebooks to demonstrate core AI/ML concepts and visualize deep learning behavior for students.",
-      bullets: [
-        "Created code-first demos to build intuition (training curves, overfitting, optimization behavior).",
-        "Implemented reference notebooks for key models and concepts used throughout the course.",
-        "Focused on clear explanations, reproducible experiments, and high-quality visualizations.",
-      ],
-      topics: [
-        "Search",
-        "CSPs",
-        "Linear Models",
-        "CNNs",
-        "Optimization",
-        "RNNs",
-        "Transformers",
-      ],
-      tech: ["Python", "Jupyter", "Google Colab", "PyTorch", "NumPy", "Matplotlib"],
-      featured: true,
-    },
+  {
+    title: "Intro to Artificial Intelligence — Teaching Assistant",
+    org: "University of Notre Dame · CSE Department",
+    dates: "May 2024 — May 2026",
+    description:
+      "Teaching assistant for a core undergraduate AI course, supporting instruction across foundational AI algorithms, probabilistic models, and modern machine learning.",
+    bullets: [
+      "Assisted in teaching core AI topics including search algorithms, Bayesian statistics, Markovian models, and foundational machine learning concepts.",
+      "Lectured to 100+ students on neural networks, backpropagation, clustering methods, and dimensionality reduction.",
+      "Hosted weekly office hours to support students with conceptual understanding and technical programming challenges.",
+      "Developed assignment and exam materials including questions, answer keys, rubrics, and code outlines.",
+    ],
+    topics: [
+      "AI Search",
+      "Bayesian Statistics",
+      "Markov Models",
+      "Machine Learning",
+      "Neural Networks",
+      "Backpropagation",
+      "Clustering",
+      "Dimensionality Reduction",
+    ],
+    tech: ["Python", "Jupyter", "PyTorch", "NumPy", "Matplotlib"],
+    featured: true,
+  },
+  {
+    title: "Generative AI — Teaching Assistant",
+    org: "University of Notre Dame · CSE Department",
+    dates: "Jan 2026 — May 2026",
+    description:
+      "Teaching assistant for a Generative AI course focused on modern generative models and applied AI systems.",
+    bullets: [
+      "Supported instruction and coursework related to generative AI models and modern AI techniques.",
+      "Assisted students with understanding model behavior, implementation details, and experimental results.",
+      "Provided technical guidance during office hours and assignment development.",
+    ],
+    tech: ["Python", "Deep Learning", "Generative Models"],
+  },
   ];
 
   return (
@@ -156,21 +203,6 @@ export default function WorkPage() {
           ))}
         </div>
       </section>
-
-      <footer className="flex flex-wrap gap-3 pt-4">
-        <a
-          href="/resume"
-          className="inline-flex items-center rounded-md border px-4 py-2 text-sm font-medium hover:bg-foreground/10"
-        >
-          View Resume
-        </a>
-        <a
-          href="/research"
-          className="inline-flex items-center rounded-md border px-4 py-2 text-sm font-medium hover:bg-foreground/10"
-        >
-          View Research
-        </a>
-      </footer>
     </section>
   );
 }
