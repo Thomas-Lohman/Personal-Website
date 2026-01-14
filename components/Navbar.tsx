@@ -8,6 +8,7 @@ const navItems = [
   { href: "/", label: "Home" },
   { href: "/work", label: "Work" },
   { href: "/research", label: "Research" },
+  { href: "/hobbies", label: "Hobbies" }, // NEW
   { href: "/resume", label: "Resume" },
 ];
 
@@ -22,7 +23,11 @@ export default function Navbar() {
   return (
     <header className="w-full border-b">
       <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-        <Link href="/" className="font-semibold">
+        {/* Name */}
+        <Link
+          href="/"
+          className="text-xl font-bold tracking-tight font-mono"
+        >
           Thomas Lohman
         </Link>
 
