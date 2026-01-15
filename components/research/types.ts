@@ -1,4 +1,7 @@
-export type ResearchLink = { label: string; href: string };
+export type ResearchLink = {
+  label: string;
+  href: string;
+};
 
 export type ResearchItem = {
   title: string;

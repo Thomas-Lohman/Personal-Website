@@ -6,9 +6,11 @@ export default function ResearchCard({ item }: { item: ResearchItem }) {
   return (
     <Card featured={item.featured}>
       <div className="space-y-2">
-        {item.featured ? <Badge text="Featured" /> : null}
-
-        <h3 className="text-lg font-semibold">{item.title}</h3>
+        {/* Title row with right-aligned badge */}
+        <div className="flex items-start justify-between gap-4">
+          <h3 className="text-lg font-semibold">{item.title}</h3>
+          {item.featured ? <Badge text="Featured" /> : null}
+        </div>
 
         {item.subtitle ? (
           <div className="text-sm opacity-70">{item.subtitle}</div>
@@ -29,16 +31,17 @@ export default function ResearchCard({ item }: { item: ResearchItem }) {
       {item.tech?.length ? <TagRow tags={item.tech} /> : null}
 
       {item.links?.length ? (
-        <div className="mt-4 flex flex-wrap gap-3 text-sm">
-          {item.links.map((l) => (
+        <div className="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-sm">
+          {item.links.map((link) => (
             <a
-              key={l.href}
-              href={l.href}
-              className="underline underline-offset-4 opacity-90 hover:opacity-100"
+              key={link.href}
+              href={link.href}
               target="_blank"
               rel="noreferrer"
+              className="inline-flex items-center gap-1 underline underline-offset-4 opacity-80 hover:opacity-100"
             >
-              {l.label}
+              {link.label}
+              <span className="opacity-60">↗</span>
             </a>
           ))}
         </div>
