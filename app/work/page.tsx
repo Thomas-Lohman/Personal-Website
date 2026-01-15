@@ -9,15 +9,13 @@ function DropdownSection({
   title,
   subtitle,
   children,
-  defaultOpen = false,
 }: {
   title: string;
   subtitle?: string;
   children: React.ReactNode;
-  defaultOpen?: boolean;
 }) {
   return (
-    <details className="group space-y-6" open={defaultOpen}>
+    <details className="group space-y-6">
       <summary className="list-none cursor-pointer">
         <div className="flex items-start justify-between gap-4">
           <SectionHeader title={title} subtitle={subtitle} />
@@ -171,40 +169,39 @@ export default function WorkPage() {
       role: "Data Scientist",
       org: "DroneResponse",
       dates: "Jan 2026 — May 2026",
-      description:
-        "Temporyary Placeholder",
-      bullets: [
-        "Temporary Placeholder",
-      ],
-      tech: [
-        "MQTT",
-      ],
+      description: "Temporyary Placeholder",
+      bullets: ["Temporary Placeholder"],
+      tech: ["MQTT"],
     },
     {
       role: "Data Science Intern",
       org: "1st Source Bank",
       dates: "Jan 2024 — Jul 2024",
-      description:
-        "Temporary placeholder",
+      description: "Temporary placeholder",
       bullets: [
         "Developed new methods to classify the bank’s primary customers using 15+ years of customer data.",
         "Built logistic regression model to predict primary-customer classification, achieving 85%+ test accuracy.",
         "Analyzed customer transaction behavior over time to identify predictors of future primary-customer status.",
       ],
-      tech: ["Python", "Pandas", "Numpy","Scikit-learn"],
+      tech: ["Python", "Pandas", "Numpy", "Scikit-learn"],
     },
     {
       role: "Technical Market Analyst Intern",
       org: "Idea Center, University of Notre Dame",
       dates: "Aug 2023 — May 2024",
-      description:
-        "Assess commercialization prospects of professor research and IP.",
+      description: "Assess commercialization prospects of professor research and IP.",
       bullets: [
         "Conducted market research to identify commercialization opportunities for faculty research and IP.",
         "Created and presented reports summarizing market size, competitive landscape, and actionable recommendations.",
         "Synthesized technical and business considerations into clear narratives for decision-makers.",
       ],
-      tech: ["Powerpoint", "Market Research", "Competitive Analysis", "Technical Writing", "Presenting"],
+      tech: [
+        "Powerpoint",
+        "Market Research",
+        "Competitive Analysis",
+        "Technical Writing",
+        "Presenting",
+      ],
     },
   ];
 
@@ -255,14 +252,15 @@ export default function WorkPage() {
       <header className="space-y-3">
         <h1 className="text-3xl font-bold">Work</h1>
         <p className="opacity-80 max-w-3xl">
-          A selection of past projects, work experience, and teaching experience. For research-focused work, see the{" "}
+          A selection of past projects, work experience, and teaching experience.
+          For research-focused work, see the{" "}
           <a className="underline underline-offset-4" href="/research">
             Research
           </a>{" "}
           page.
         </p>
         <p className="opacity-80 max-w-3xl">
-         Click the dropdowns below to expand any of the sections :)
+          Click the dropdowns below to expand any of the sections :)
         </p>
       </header>
 
@@ -270,7 +268,6 @@ export default function WorkPage() {
         <DropdownSection
           title="Selected Projects"
           subtitle="A few projects I thought were interesting."
-          defaultOpen
         >
           <div
             className={

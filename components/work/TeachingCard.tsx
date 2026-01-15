@@ -6,9 +6,11 @@ export default function TeachingCard({ item }: { item: TeachingItem }) {
   return (
     <Card featured={item.featured}>
       <div className="space-y-2">
-        {item.featured ? <Badge text="Featured Teaching Work" /> : null}
-
-        <h3 className="text-lg font-semibold">{item.title}</h3>
+        {/* Title row with right-aligned Featured badge */}
+        <div className="flex items-start justify-between gap-4">
+          <h3 className="text-lg font-semibold">{item.title}</h3>
+          {item.featured ? <Badge text="FEATURED" /> : null}
+        </div>
 
         <div className="text-sm opacity-70">
           {item.org} • {item.dates}
