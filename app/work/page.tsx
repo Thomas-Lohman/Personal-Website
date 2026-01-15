@@ -8,8 +8,24 @@ import type { Experience, Project, TeachingItem } from "@/components/work/types"
 export default function WorkPage() {
   // ---- Selected Projects (filled) ----
   const projects: Project[] = [
+        {
+      title: "March Madness Analytics Web Application",
+      description:
+        "A full-stack web application providing data-driven NCAA March Madness bracket guidance and predictive insights.",
+      bullets: [
+        "Co-founded a full-stack web application for NCAA March Madness bracket guidance and paid picks.",
+        "Built data pipelines and a Supabase-backed database for team, game, and tournament data.",
+        "Trained statistical and machine learning models to predict game outcomes in the bracket.",
+        "Integrated predictive insights into interactive matchup and bracket decision tools.",
+        "Developing an AI-powered research assistant (LLM) for tournament analysis."
+      ],
+      tech: ["Python", "Typescript", "SQL", "Relational Databases", "Vercel", "Pandas", "Sklearn", "PyTorch"],
+      links: [
+        // { label: "GitHub", href: "https://github.com/Thomas-Lohman/REPO" },
+      ],
+    },
     {
-      title: "Multi-Agent AI System for Effective Language Learning",
+      title: "Generative AI System for Effective Language Learning",
       description:
         "A multi-agent language learning system with an LLM conversational agent, real-time translation, and lightweight image generation for immersive practice.",
       bullets: [
@@ -31,15 +47,66 @@ export default function WorkPage() {
       ],
     },
     {
-      title: "March Madness Analytics Project",
+      title: "Homelessness Discourse Retrieval-Augmented Generation System",
       description:
-        "An analytics project for exploring NCAA tournament matchups with data-driven features and interactive analysis views.",
+        "An AI-for-social-good project using retrieval-augmented generation to provide fact-grounded, cited responses to questions about homelessness in the United States.",
       bullets: [
-        "Built a pipeline to structure and analyze team/game data for matchup comparisons and tournament insights.",
-        "Designed statistical features to summarize team strength, style differences, and historical performance trends.",
-        "Created interactive views to explore predictions, what-if scenarios, and interpretable team comparisons.",
+        "Built an end-to-end conversational RAG pipeline using LangChain and Chainlit, maintaining persistent memory, generating fact-grounded responses, and citing document sources in real time",
+        "Indexed policy briefs, research papers, and news reports into a Milvus vector database for semantic retrieval.",
+        "Designed a document ingestion pipeline with text extraction, chunking, metadata enrichment, and embedding generation.",
+        "Tuned retrieval performance using L2 similarity search hyperparamter tuning and evaluated citation reliability.",
+        "Ensured fact-grounded responses by surfacing document sources, filenames, and content previews in real time with system responses."
       ],
-      tech: ["Python", "Pandas", "Statistics", "Data Visualization", "Analytics"],
+      tech: [
+        "Python",
+        "LLMs",
+        "Retrieval-Augmented Generation (RAG)",
+        "LangChain",
+        "Chainlit",
+        "Vector Databases",
+        "Document Embeddings"
+      ],
+      links: [
+        // { label: "GitHub", href: "https://github.com/Thomas-Lohman/REPO" },
+      ],
+    },
+    {
+      title: "Fine-Tuning LLMs for Text-to-Emoji Translation",
+      description:
+        "A large language model fine-tuning project focused on translating natural language into expressive emoji sequences.",
+      bullets: [
+        "Fine-tuned a 7B-parameter LLaMA 2 model using QLoRA with 4-bit quantization (nf4) and LoRA adapters, enabling efficient low-resource translations.",
+        "Evaluated performance through zero-shot and few-shot testing on both known and novel prompts, analyzing the model’s ability to capture sentiment, tone, and figurative meaning in ambiguous or contradictory inputs",
+        "Gained hands-on experience with LLM fine-tuning, prompt design, and PEFT techniques."
+      ],
+      tech: [
+        "Python",
+        "PyTorch",
+        "Hugging Face Transformers",
+        "PEFT Methods",
+        "LoRA",
+        "LLMs",
+      ],
+      links: [
+        // { label: "GitHub", href: "https://github.com/Thomas-Lohman/REPO" },
+      ],
+    },
+    {
+      title: "CycleGAN Seasonal Translation Model",
+      description:
+        "A generative adversarial network for unpaired image-to-image translation between seasonal domains.",
+      bullets: [
+        "Implemented a custom CycleGAN architecture in PyTorch for unpaired seasonal image translation.",
+        "Engineered a data preprocessing and augmentation pipeline to resize, crop, flip, normalize, and augment high-resolution images for robust seasonal style generalization",
+        "Experimented with loss function weighting and training stability techniques to improve visual realism and consistency.",
+      ],
+      tech: [
+        "Python",
+        "PyTorch",
+        "Computer Vision",
+        "Generative Adversarial Networks",
+        "Generative AI"
+      ],
       links: [
         // { label: "GitHub", href: "https://github.com/Thomas-Lohman/REPO" },
       ],
@@ -47,14 +114,14 @@ export default function WorkPage() {
     {
       title: "WorNDle — Multilingual Wordle Web Application",
       description:
-        "A full-stack, multilingual Wordle-style web game with authentication, persistent user history, and API-driven purchases for extra plays.",
+        "A full-stack, multilingual Wordle-style web game",
       bullets: [
-        "Developed a multilingual Wordle-style game supporting five languages with a daily play limit (up to three games/day) and persistent user history.",
+        "Developed a multilingual Wordle-style game supporting five languages with a daily play limit and persistent user history.",
         "Implemented core gameplay logic in Python and JavaScript and built a personalized user page for viewing game history.",
         "Integrated RESTful APIs to support secure purchases of additional plays from a remote server and update access in real time.",
-        "Used Django authentication to handle secure signup/login flows, verification, and reliable session management.",
+        "Used Django authentication to handle secure signup/login, verification, and reliable session management.",
       ],
-      tech: ["Django", "Python", "JavaScript", "Bootstrap", "SQLite", "REST APIs", "Auth"],
+      tech: ["Django", "Bootstrap", "SQLite", "Javascript", "Python", "RESTful APIs"],
       links: [
         // { label: "GitHub", href: "https://github.com/Thomas-Lohman/REPO" },
       ],
