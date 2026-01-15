@@ -6,8 +6,16 @@ export default function ProjectCard({ project }: { project: Project }) {
   return (
     <Card featured={project.featured}>
       <div className="space-y-2">
-        {project.featured ? <Badge text="Featured" /> : null}
-        <h3 className="text-lg font-semibold">{project.title}</h3>
+        {/* Title + badges row */}
+        <div className="flex items-center justify-between gap-4">
+          <h3 className="text-lg font-semibold">{project.title}</h3>
+
+          <div className="flex flex-wrap gap-2">
+            {project.featured ? <Badge text="Featured" /> : null}
+            {project.status ? <Badge text={project.status} /> : null}
+          </div>
+        </div>
+
         <p className="opacity-80">{project.description}</p>
       </div>
 

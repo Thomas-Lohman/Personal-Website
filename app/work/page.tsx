@@ -37,6 +37,8 @@ export default function WorkPage() {
   const projects: Project[] = [
     {
       title: "March Madness Analytics Web Application",
+      status: "Current",
+      featured: true,
       description:
         "A full-stack web application providing data-driven NCAA March Madness bracket guidance and predictive insights.",
       bullets: [
@@ -170,16 +172,12 @@ export default function WorkPage() {
       org: "DroneResponse",
       dates: "Jan 2026 — May 2026",
       description:
-        "Applied data science work focused on building and improving data-driven decision support.",
+        "Temporyary Placeholder",
       bullets: [
-        "Developed and evaluated data-driven methods to support business and operational decision-making.",
-        "Collaborated with stakeholders to translate requirements into measurable modeling objectives and deliverables.",
+        "Temporary Placeholder",
       ],
       tech: [
-        "Python (optional)",
-        "Pandas (optional)",
-        "Modeling (optional)",
-        "Data Analysis (optional)",
+        "MQTT",
       ],
     },
     {
@@ -187,26 +185,26 @@ export default function WorkPage() {
       org: "1st Source Bank",
       dates: "Jan 2024 — Jul 2024",
       description:
-        "Customer analytics and classification using 15+ years of historical customer data.",
+        "Temporary placeholder",
       bullets: [
         "Developed new methods to classify the bank’s primary customers using 15+ years of customer data.",
-        "Built a logistic regression model to predict primary-customer classification, achieving 85%+ test accuracy.",
-        "Performed feature engineering and validation to improve model stability and interpretability.",
+        "Built logistic regression model to predict primary-customer classification, achieving 85%+ test accuracy.",
+        "Analyzed customer transaction behavior over time to identify predictors of future primary-customer status.",
       ],
-      tech: ["Python", "Pandas", "scikit-learn", "SQL (optional)", "Logistic Regression"],
+      tech: ["Python", "Pandas", "Numpy","Scikit-learn"],
     },
     {
       role: "Technical Market Analyst Intern",
       org: "Idea Center, University of Notre Dame",
-      dates: "Jan 2024 — Jul 2024",
+      dates: "Aug 2023 — May 2024",
       description:
-        "Market research and commercialization support for university research and technology transfer efforts.",
+        "Assess commercialization prospects of professor research and IP.",
       bullets: [
         "Conducted market research to identify commercialization opportunities for faculty research and IP.",
         "Created and presented reports summarizing market size, competitive landscape, and actionable recommendations.",
         "Synthesized technical and business considerations into clear narratives for decision-makers.",
       ],
-      tech: ["Market Research", "Competitive Analysis", "Technical Writing", "Presentations"],
+      tech: ["Powerpoint", "Market Research", "Competitive Analysis", "Technical Writing", "Presenting"],
     },
   ];
 

@@ -7,6 +7,7 @@ export type Project = {
   tech: string[];
   links?: LinkItem[];
   featured?: boolean;
+  status?: string;
 };
 
 export type Experience = {
