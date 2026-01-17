@@ -3,38 +3,32 @@ import Image from "next/image";
 export default function HomePage() {
   return (
     <section className="space-y-10">
-      {/* About + Photo */}
+      {/* About + Photo (top row) */}
       <div className="grid gap-10 md:grid-cols-[1.4fr_0.6fr] md:items-start">
-        {/* About */}
+        {/* About (first two paragraphs only) */}
         <div className="space-y-4">
           <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
             About Me
           </h1>
 
           <p className="opacity-80 max-w-2xl leading-relaxed">
-            I’m a Master’s student in Computer Science and Engineering at the University of Notre Dame, 
-            specializing in machine learning and data science. I’m passionate about 
-            (1) modeling relationships in data and (2) exploring how deep learning models can learn from and reason with data.
+            I’m a Master’s student in Computer Science and Engineering at the University of Notre Dame,
+            specializing in machine learning and data science. I’m passionate about (1) modeling
+            relationships in data and (2) exploring how deep learning models can learn from and reason
+            with data.
           </p>
 
           <p className="opacity-80 max-w-2xl leading-relaxed">
-            My research focuses on machine learning for portfolio optimization in U.S. equity markets, 
-            with additional experience in customer analytics in banking, AI systems in education, ML for art creation, 
-            and predictive modeling in sports. I’m driven by curiosity and a desire to build AI systems that are not only 
-            accurate and efficient, but also interpretable, adaptable, and impactful in the real world.
-          </p>
-
-          <p className="opacity-80 max-w-2xl leading-relaxed">
-            At the core of my interest in AI is an appreciation for data and the stories it can tell. I enjoy 
-            digging into data to uncover patterns that lead to meaningful insights, then using those insights as 
-            the foundation for building intelligent systems. Whether informing decisions, 
-            shaping model behavior, or enabling new forms of interaction, I’m excited by how thoughtfully used data can 
-            drive solutions and power AI systems that are both impactful and fun to design.
+            My research focuses on machine learning for portfolio optimization in U.S. equity markets,
+            with additional experience in customer analytics in banking, AI systems in education, ML
+            for art creation, and predictive modeling in sports. I’m driven by curiosity and a desire
+            to build AI systems that are not only accurate and efficient, but also interpretable,
+            adaptable, and impactful in the real world.
           </p>
         </div>
 
-        {/* Photo (no links) */}
-        <div className="md:justify-self-end w-full max-w-[320px]">
+        {/* Photo */}
+        <div className="md:justify-self-end w-full max-w-[320px] mt-6">
           <div className="overflow-hidden rounded-2xl border shadow-sm">
             <div className="relative aspect-square w-full">
               <Image
@@ -50,12 +44,20 @@ export default function HomePage() {
         </div>
       </div>
 
+      {/* Full-width third paragraph */}
+      <p className="opacity-80 max-w-4xl leading-relaxed">
+        At the core of my interest in AI is an appreciation for data and the stories it can tell. I
+        enjoy digging into data to uncover patterns that lead to meaningful insights, then using
+        those insights as the foundation for building intelligent systems. Whether informing
+        decisions, shaping model behavior, or enabling new forms of interaction, I’m excited by how
+        thoughtfully used data can drive solutions and power AI systems that are both impactful and
+        fun to design.
+      </p>
+
       {/* Contact Information */}
       <div className="border-t pt-8 space-y-4">
         <h2 className="text-xl font-semibold tracking-tight">Contact</h2>
-        <p className="opacity-80 max-w-2xl">
-          If you want to reach me: 
-        </p>
+        <p className="opacity-80 max-w-2xl">If you want to reach me:</p>
 
         <div className="flex flex-wrap gap-4">
           <a
@@ -136,5 +138,3 @@ function GitHubIcon() {
     </svg>
   );
 }
-
-
