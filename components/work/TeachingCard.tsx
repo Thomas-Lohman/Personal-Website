@@ -27,7 +27,7 @@ export default function TeachingCard({ item }: { item: TeachingItem }) {
 
       {item.topics?.length ? (
         <div className="mt-4">
-          <div className="text-sm font-medium opacity-90">Topics</div>
+          <div className="text-sm font-medium opacity-90"></div>
           <div className="mt-2 flex flex-wrap gap-2">
             {item.topics.map((t) => (
               <span

@@ -63,25 +63,20 @@ export default function WorkPage() {
     {
       title: "Multimodal Generative AI System for Effective Language Learning",
       description:
-        "A multimodal AI system that acts as a dynamic conversational partner for beginner language learners, combining constrained-decoding LLM dialogue, real-time translation, and lightweight image generation to support vocabulary acquisition and engagement.",
+        "A multimodal AI system that acts as a dynamic conversational partner for language learners",
       bullets: [
         "Designed a modular AI system that enables open-ended, level-appropriate conversation for beginner Spanish learners using constrained decoding.",
         "Implemented token-level decoding constraints to restrict vocabulary and grammar to CEFR A2 standards while preserving conversational coherence.",
         "Integrated real-time English translation to support comprehension during live foreign-language interaction.",
         "Developed a multimodal pipeline that extracts keywords from conversation turns and generates contextual images to reinforce word-to-picture associations.",
-        "Evaluated hard vs. soft decoding constraints, showing that soft logit biasing achieved over 85% target-vocabulary usage while maintaining grammatical correctness.",
-        "Demonstrated a lightweight, low-latency system capable of generating relevant images in under 5 seconds on average.",
       ],
       tech: [
         "Python",
         "Large Language Models (LLMs)",
         "Constrained Decoding",
-        "Logit Biasing",
+        "AI Systems",
         "Mistral-7B",
-        "Koala-Lightning",
-        "KeyBERT",
         "Multimodal Systems",
-        "Machine Learning for Education",
       ],
       links: [
         // { label: "Paper", href: "/path-to-paper.pdf" },
@@ -218,16 +213,22 @@ export default function WorkPage() {
       org: "University of Notre Dame · CSE Department",
       dates: "May 2024 — May 2026",
       description:
-        "Temporary description.",
+        "TA for a core junior/senior level AI course.",
       bullets: [
-        "Temp bullet point",
+        "Lectured to over 100 students on topics including neural networks, backpropagation, clustering, and dimensionality reduction.",
+        "Co-designed a series of programming assignments covering AI search, Bayesian statistics, classical machine learning, deep learning foundations, and transformer architectures.",
       ],
       topics: [
         "AI Search",
         "Bayesian Statistics",
         "Markov Models",
+        "Decision Trees",
+        "Resression Models",
+        "Neural Networks",
+        "Deep Learning",
+        "Clusterning",
       ],
-      tech: ["Python", "Jupyter", "PyTorch", "NumPy", "Matplotlib"],
+      tech: ["Python", "Numpy", "Pandas", "Sklearn", "PyTorch", "Matplotlib", "Huggingface"],
       featured: true,
     },
     {
@@ -235,11 +236,11 @@ export default function WorkPage() {
       org: "University of Notre Dame · CSE Department",
       dates: "Jan 2026 — May 2026",
       description:
-        "Temp description.",
+        "TA for new GenAI course in Notre Dame engineering school.",
       bullets: [
-        "Temp bullet point.",
+        "Guided students through a from-scratch implementation of a minimal ChatGPT-style language model, covering tokenization, transformer blocks, training loops, and inference.",
       ],
-      tech: ["Python", "Deep Learning", "Generative Models"],
+      tech: ["Python", "Deep Learning", "Generative Models", "LLMs"],
     },
   ];
 
