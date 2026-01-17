@@ -1,3 +1,5 @@
+// components/work/types.ts
+
 export type LinkItem = { label: string; href: string };
 
 export type Project = {
@@ -8,6 +10,17 @@ export type Project = {
   links?: LinkItem[];
   featured?: boolean;
   status?: string;
+};
+
+export type ResearchItem = {
+  title: string;
+  subtitle?: string; // e.g., "Poster / Paper"
+  description: string;
+  bullets?: string[];
+  topics?: string[];
+  tech?: string[];
+  links?: LinkItem[];
+  featured?: boolean;
 };
 
 export type Experience = {

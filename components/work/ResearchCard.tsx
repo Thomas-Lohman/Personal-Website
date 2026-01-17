@@ -1,5 +1,5 @@
-import Card, { Badge } from "../work/Card";
-import TagRow from "../work/TagRow";
+import Card, { Badge } from "./Card";
+import TagRow from "./TagRow";
 import type { ResearchItem } from "./types";
 
 export default function ResearchCard({ item }: { item: ResearchItem }) {
