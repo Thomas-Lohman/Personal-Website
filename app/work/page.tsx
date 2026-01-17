@@ -168,17 +168,17 @@ export default function WorkPage() {
   const experience: Experience[] = [
     {
       role: "Data Scientist",
-      org: "DroneResponse",
+      org: "NASA Sade (Safety-Aware Drone Ecosystem)",
       dates: "Jan 2026 — May 2026",
-      description: "Temporyary Placeholder",
-      bullets: ["Temporary Placeholder"],
+      description: "Temporyary Placeholder for Description",
+      bullets: ["Building a real-time monitoring system to verify drone behavior and mission compliance when entering regulated and safety-critical airspaces."],
       tech: ["MQTT"],
     },
     {
       role: "Data Science Intern",
       org: "1st Source Bank",
       dates: "Jan 2024 — Jul 2024",
-      description: "Temporary placeholder",
+      description: "Applied statistical modeling to large-scale customer and transaction data to support customer segmentation and predictive insights for retail banking.",
       bullets: [
         "Developed new methods to classify the bank’s primary customers using 15+ years of customer data.",
         "Built logistic regression model to predict primary-customer classification, achieving 85%+ test accuracy.",
