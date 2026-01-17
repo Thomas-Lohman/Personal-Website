@@ -8,7 +8,7 @@ const navItems = [
   { href: "/", label: "Home" },
   { href: "/work", label: "Work" },
   { href: "/research", label: "Research" },
-  { href: "/hobbies", label: "Hobbies" }, // NEW
+  { href: "/hobbies", label: "Hobbies" },
   { href: "/resume", label: "Resume" },
 ];
 
@@ -21,18 +21,16 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="w-full border-b">
-      <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
+    <header className="w-full border-b overflow-x-hidden">
+      <nav className="mx-auto flex w-full max-w-5xl items-center justify-between gap-4 px-4 sm:px-6 py-4">
         {/* Name */}
-        <Link
-          href="/"
-          className="text-xl font-bold tracking-tight font-mono"
-        >
+        <Link href="/" className="text-xl font-bold tracking-tight font-mono shrink-0">
           Thomas Lohman
         </Link>
 
-        <div className="flex items-center gap-3">
-          <div className="flex gap-2 text-sm">
+        <div className="flex items-center gap-3 min-w-0">
+          {/* Links */}
+          <div className="flex flex-wrap justify-end gap-2 text-sm min-w-0">
             {navItems.map((item) => {
               const active = isActivePath(pathname, item.href);
 
@@ -41,11 +39,9 @@ export default function Navbar() {
                   key={item.href}
                   href={item.href}
                   className={[
-                    "rounded-md px-3 py-1 transition",
+                    "rounded-md px-3 py-1 transition whitespace-nowrap",
                     "hover:bg-foreground/10",
-                    active
-                      ? "font-semibold underline underline-offset-4"
-                      : "opacity-80",
+                    active ? "font-semibold underline underline-offset-4" : "opacity-80",
                   ].join(" ")}
                 >
                   {item.label}
