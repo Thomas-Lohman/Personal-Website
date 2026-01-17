@@ -4,7 +4,7 @@ export default function ResumePage() {
       <header className="space-y-2">
         <h1 className="text-3xl font-bold">Resume</h1>
         <p className="opacity-80 max-w-2xl">
-          View my resume below or download the PDF.
+          View my resume below or download the PDF. 
         </p>
       </header>
 
