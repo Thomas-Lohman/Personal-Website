@@ -1,4 +1,4 @@
-import ResearchCard from "../../components/research/ResearchCard";
+import ResearchCard from "../../components/work/ResearchCard";
 import type { ResearchItem } from "../../components/research/types";
 
 export default function ResearchPage() {

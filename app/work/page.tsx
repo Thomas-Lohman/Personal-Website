@@ -1,9 +1,15 @@
 import SectionHeader from "@/components/work/SectionHeader";
 import ProjectCard from "@/components/work/ProjectCard";
+import ResearchCard from "@/components/work/ResearchCard";
 import ExperienceRow from "@/components/work/ExperienceRow";
 import TeachingCard from "@/components/work/TeachingCard";
 
-import type { Experience, Project, TeachingItem } from "@/components/work/types";
+import type {
+  Experience,
+  Project,
+  TeachingItem,
+  ResearchItem,
+} from "@/components/work/types";
 
 function DropdownSection({
   title,
@@ -164,6 +170,74 @@ export default function WorkPage() {
     },
   ];
 
+  // ---- Research (NEW) ----
+  const research: ResearchItem[] = [
+    {
+      title: "Machine Learning for Transaction-Cost-Aware Portfolio Allocation",
+      subtitle: "Master’s Thesis Direction · Jun 2025 — Dec 2025",
+      description:
+        "Temporary desc.",
+      bullets: [
+        "temp bullet point",
+      ],
+      topics: [
+        "Portfolio Optimization",
+        "Machine Learning for Finance",
+        "Empirical Finance",
+      ],
+      tech: ["Python", "CRSP", "Pandas", "Optimization", "Backtesting"],
+      links: [
+        { label: "Thesis Proposal", href: "https://example.com/thesis-proposal.pdf" },
+        { label: "Code (Private)", href: "https://github.com/username/thesis-repo" },
+        { label: "CRSP Dataset", href: "https://www.crsp.org/" },
+      ],
+      featured: true,
+    },
+    {
+      title: "Abstract Art Analysis with Large Language Models",
+      subtitle: "Vision-Language & LLM Evaluation Research",
+      description:
+        "Temp description",
+      bullets: [
+        "Temp bullet point",
+      ],
+      topics: [
+        "Vision-Language Models",
+        "LLMs",
+        "In-Context Learning",
+        "Evaluation",
+        "Emotion Classification",
+      ],
+      tech: ["Python", "PyTorch", "Embeddings", "Evaluation"],
+      links: [
+        { label: "Paper (Preprint)", href: "https://arxiv.org/abs/xxxx.xxxxx" },
+        { label: "GitHub", href: "https://github.com/username/abstract-art-llm" },
+        { label: "Poster", href: "https://example.com/poster.pdf" },
+      ],
+    },
+    {
+      title: "Publication Network Analysis",
+      subtitle:
+        "Undergraduate Research · University of Notre Dame CSE · Aug 2024 — Dec 2024",
+      description:
+        "Temp description",
+      bullets: [
+        "Temp bullet point.",
+      ],
+      topics: [
+        "Network Analysis",
+        "Graph Methods",
+        "Scientific Publications",
+        "Large-Scale Data",
+      ],
+      tech: ["Python", "Graph Analysis", "Large-Scale Data Processing"],
+      links: [
+        { label: "Technical Report", href: "https://example.com/report.pdf" },
+        { label: "Code", href: "https://github.com/username/pub-network-analysis" },
+      ],
+    },
+  ];
+
   // ---- Internships & Jobs ----
   const experience: Experience[] = [
     {
@@ -171,14 +245,17 @@ export default function WorkPage() {
       org: "NASA Sade (Safety-Aware Drone Ecosystem)",
       dates: "Jan 2026 — May 2026",
       description: "Temporyary Placeholder for Description",
-      bullets: ["Building a real-time monitoring system to verify drone behavior and mission compliance when entering regulated and safety-critical airspaces."],
+      bullets: [
+        "Building a real-time monitoring system to verify drone behavior and mission compliance when entering regulated and safety-critical airspaces.",
+      ],
       tech: ["MQTT"],
     },
     {
       role: "Data Science Intern",
       org: "1st Source Bank",
       dates: "Jan 2024 — Jul 2024",
-      description: "Applied statistical modeling to large-scale customer and transaction data to support customer segmentation and predictive insights for retail banking.",
+      description:
+        "Applied statistical modeling to large-scale customer and transaction data to support customer segmentation and predictive insights for retail banking.",
       bullets: [
         "Developed new methods to classify the bank’s primary customers using 15+ years of customer data.",
         "Built logistic regression model to predict primary-customer classification, achieving 85%+ test accuracy.",
@@ -212,8 +289,7 @@ export default function WorkPage() {
       title: "Intro to Artificial Intelligence — Teaching Assistant",
       org: "University of Notre Dame · CSE Department",
       dates: "May 2024 — May 2026",
-      description:
-        "TA for a core junior/senior level AI course.",
+      description: "TA for a core junior/senior level AI course.",
       bullets: [
         "Lectured to over 100 students on topics including neural networks, backpropagation, clustering, and dimensionality reduction.",
         "Co-designed a series of programming assignments covering AI search, Bayesian statistics, classical machine learning, deep learning foundations, and transformer architectures.",
@@ -228,15 +304,22 @@ export default function WorkPage() {
         "Deep Learning",
         "Clusterning",
       ],
-      tech: ["Python", "Numpy", "Pandas", "Sklearn", "PyTorch", "Matplotlib", "Huggingface"],
+      tech: [
+        "Python",
+        "Numpy",
+        "Pandas",
+        "Sklearn",
+        "PyTorch",
+        "Matplotlib",
+        "Huggingface",
+      ],
       featured: true,
     },
     {
       title: "Generative AI — Teaching Assistant",
       org: "University of Notre Dame · CSE Department",
       dates: "Jan 2026 — May 2026",
-      description:
-        "TA for new GenAI course in Notre Dame engineering school.",
+      description: "TA for new GenAI course in Notre Dame engineering school.",
       bullets: [
         "Guided students through a from-scratch implementation of a minimal ChatGPT-style language model, covering tokenization, transformer blocks, training loops, and inference.",
       ],
@@ -249,17 +332,13 @@ export default function WorkPage() {
       <header className="space-y-3">
         <h1 className="text-3xl font-bold">Work</h1>
         <p className="opacity-80">
-          A selection of past projects, work experience, and teaching experience.
-          For research-focused work, see the{" "}
-          <a className="underline underline-offset-4" href="/research">
-            Research
-          </a>{" "}
-          page.
+          A selection of past projects, research-driven work, work experience, and teaching experience.
         </p>
         <p className="opacity-80">
           Click the dropdowns below to expand any of the sections :)
         </p>
       </header>
+
       <div className="space-y-10">
         <DropdownSection
           title="Selected Projects"
@@ -273,6 +352,17 @@ export default function WorkPage() {
           >
             {projects.map((p) => (
               <ProjectCard key={p.title} project={p} />
+            ))}
+          </div>
+        </DropdownSection>
+
+        <DropdownSection
+          title="Research"
+          subtitle="Research-driven projects with papers, posters, and presentations."
+        >
+          <div className="grid gap-6">
+            {research.map((r) => (
+              <ResearchCard key={r.title} item={r} />
             ))}
           </div>
         </DropdownSection>
