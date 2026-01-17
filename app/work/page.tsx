@@ -235,7 +235,7 @@ export default function WorkPage() {
     <section className="space-y-14">
       <header className="space-y-3">
         <h1 className="text-3xl font-bold">Work</h1>
-        <p className="opacity-80 max-w-3xl">
+        <p className="opacity-80">
           A selection of past projects, work experience, and teaching experience.
           For research-focused work, see the{" "}
           <a className="underline underline-offset-4" href="/research">
@@ -243,11 +243,10 @@ export default function WorkPage() {
           </a>{" "}
           page.
         </p>
-        <p className="opacity-80 max-w-3xl">
+        <p className="opacity-80">
           Click the dropdowns below to expand any of the sections :)
         </p>
       </header>
-
       <div className="space-y-10">
         <DropdownSection
           title="Selected Projects"
