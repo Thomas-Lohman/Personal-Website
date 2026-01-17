@@ -278,7 +278,7 @@ export default function WorkPage() {
         </DropdownSection>
 
         <DropdownSection
-          title="Internships & Jobs"
+          title="Jobs and Internships"
           subtitle="Past jobs and internships involving hands-on technical and analytical work."
         >
           <div className="space-y-4">
