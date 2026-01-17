@@ -63,20 +63,14 @@ export default function WorkPage() {
     {
       title: "Generative AI System for Effective Language Learning",
       description:
-        "A multi-agent language learning system with an LLM conversational agent, real-time translation, and lightweight image generation for immersive practice.",
+        "Temp Description",
       bullets: [
-        "Designed a multi-agent workflow combining conversation, translation, and image generation to simulate context-rich language practice.",
-        "Implemented constrained decoding via adaptive logit biasing to keep responses aligned with a target proficiency level.",
-        "Built a structured prompting + generation loop to maintain coherence across turns while enforcing level constraints.",
+        "Temp bullet point",
       ],
       tech: [
         "Python",
         "LLMs",
         "Constrained Decoding",
-        "Logit Biasing",
-        "Multi-Agent",
-        "Translation Pipeline",
-        "Image Generation",
       ],
       links: [
         // { label: "GitHub", href: "https://github.com/Thomas-Lohman/REPO" },
@@ -212,22 +206,14 @@ export default function WorkPage() {
       org: "University of Notre Dame · CSE Department",
       dates: "May 2024 — May 2026",
       description:
-        "Teaching assistant for a core undergraduate AI course, supporting instruction across foundational AI algorithms, probabilistic models, and modern machine learning.",
+        "Temporary description.",
       bullets: [
-        "Assisted in teaching core AI topics including search algorithms, Bayesian statistics, Markovian models, and foundational machine learning concepts.",
-        "Lectured to 100+ students on neural networks, backpropagation, clustering methods, and dimensionality reduction.",
-        "Hosted weekly office hours to support students with conceptual understanding and technical programming challenges.",
-        "Developed assignment and exam materials including questions, answer keys, rubrics, and code outlines.",
+        "Temp bullet point",
       ],
       topics: [
         "AI Search",
         "Bayesian Statistics",
         "Markov Models",
-        "Machine Learning",
-        "Neural Networks",
-        "Backpropagation",
-        "Clustering",
-        "Dimensionality Reduction",
       ],
       tech: ["Python", "Jupyter", "PyTorch", "NumPy", "Matplotlib"],
       featured: true,
@@ -237,11 +223,9 @@ export default function WorkPage() {
       org: "University of Notre Dame · CSE Department",
       dates: "Jan 2026 — May 2026",
       description:
-        "Teaching assistant for a Generative AI course focused on modern generative models and applied AI systems.",
+        "Temp description.",
       bullets: [
-        "Supported instruction and coursework related to generative AI models and modern AI techniques.",
-        "Assisted students with understanding model behavior, implementation details, and experimental results.",
-        "Provided technical guidance during office hours and assignment development.",
+        "Temp bullet point.",
       ],
       tech: ["Python", "Deep Learning", "Generative Models"],
     },
