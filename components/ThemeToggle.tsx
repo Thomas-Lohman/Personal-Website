@@ -36,18 +36,36 @@ export default function ThemeToggle() {
     applyTheme(next);
   }
 
-  // Avoid hydration mismatch (button text differs client vs server)
   if (!mounted) return null;
+
+  const isDark = theme === "dark";
 
   return (
     <button
       type="button"
       onClick={toggleTheme}
-      className="rounded-md border px-3 py-1 text-sm opacity-80 hover:bg-foreground/10"
       aria-label="Toggle light/dark mode"
       title="Toggle theme"
+      className={[
+        "relative flex h-8 w-14 items-center rounded-full border",
+        "bg-background transition-colors",
+        "hover:bg-foreground/10",
+      ].join(" ")}
     >
-      {theme === "dark" ? "Dark" : "Light"}
+      {/* Sliding knob */}
+      <span
+        className={[
+          "absolute left-1 top-1 h-6 w-6 rounded-full",
+          "bg-foreground transition-transform",
+          isDark ? "translate-x-6" : "translate-x-0",
+        ].join(" ")}
+      />
+
+      {/* Icons */}
+      <span className="relative z-10 flex w-full items-center justify-between px-1.5 text-foreground">
+        <span className="text-xs">☀️</span>
+        <span className="text-xs">🌙</span>
+      </span>
     </button>
   );
 }
