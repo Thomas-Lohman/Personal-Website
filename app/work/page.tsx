@@ -176,9 +176,12 @@ export default function WorkPage() {
       title: "Machine Learning for Transaction-Cost-Aware Portfolio Allocation",
       subtitle: "Master’s Thesis Direction · Jun 2025 — Dec 2025",
       description:
-        "Temporary desc.",
+        "Master’s thesis research focused on integrating transaction costs into machine learning–based portfolio optimization to improve net-of-cost performance at scale.",
       bullets: [
-        "temp bullet point",
+        "Designed machine learning–driven portfolio allocation models that explicitly incorporate transaction costs to reduce turnover and slippage.",
+        "Studied the trade-off between expected returns and trading frictions to improve net-of-cost performance for large-scale capital deployment.",
+        "Conducted empirical analysis using CRSP equity data to benchmark ML-based strategies against traditional portfolio construction baselines.",
+        "Developed a backtesting framework to evaluate performance, turnover, and stability across market regimes."
       ],
       topics: [
         "Portfolio Optimization",
@@ -197,9 +200,12 @@ export default function WorkPage() {
       title: "Abstract Art Analysis with Large Language Models",
       subtitle: "Vision-Language & LLM Evaluation Research",
       description:
-        "Temp description",
+        "Empirical evaluation of open-weight multimodal LLMs on emotion classification and explanation alignment for abstract art using the ArtEmis dataset.",
       bullets: [
-        "Temp bullet point",
+        "Evaluated multiple open-weight vision-language models on abstract art interpretation using zero- and few-shot in-context learning (0–4 shots).",
+        "Designed an evaluation framework measuring both emotion classification accuracy and semantic alignment of model-generated explanations with human annotations.",
+        "Used embedding-based cosine similarity to compare model explanations against diverse human-written affective descriptions.",
+        "Found that in-context learning provided minimal improvement over zero-shot performance, while models exhibited latent alignment comparable to human–human agreement in explanation generation."
       ],
       topics: [
         "Vision-Language Models",
@@ -208,7 +214,7 @@ export default function WorkPage() {
         "Evaluation",
         "Emotion Classification",
       ],
-      tech: ["Python", "PyTorch", "Embeddings", "Evaluation"],
+      tech: ["Python", "PyTorch", "Sentence Embeddings", "Evaluation"],
       links: [
         { label: "Paper (Preprint)", href: "https://arxiv.org/abs/xxxx.xxxxx" },
         { label: "GitHub", href: "https://github.com/username/abstract-art-llm" },
@@ -220,17 +226,17 @@ export default function WorkPage() {
       subtitle:
         "Undergraduate Research · University of Notre Dame CSE · Aug 2024 — Dec 2024",
       description:
-        "Temp description",
+        "Large-scale network analysis of scientific publication and citation data to study structural differences between disruptive and developmental research.",
       bullets: [
-        "Temp bullet point.",
+        "Constructed citation networks from the SciSciNet dataset containing ~2.5 billion rows of publication data.",
+        "Developed a methodology for evaluating the similarity of publications to select networks for comparison.",
+        "Analyzed citation graphs using NetworkX, learning how local network structure and citation growth evolve over time."
       ],
       topics: [
         "Network Analysis",
-        "Graph Methods",
-        "Scientific Publications",
         "Large-Scale Data",
       ],
-      tech: ["Python", "Graph Analysis", "Large-Scale Data Processing"],
+      tech: ["Python", "Graph Analysis", "NetworkX"],
       links: [
         { label: "Technical Report", href: "https://example.com/report.pdf" },
         { label: "Code", href: "https://github.com/username/pub-network-analysis" },

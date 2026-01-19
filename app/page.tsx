@@ -46,12 +46,10 @@ export default function HomePage() {
 
       {/* Full-width third paragraph */}
       <p className="opacity-80 max-w-4xl leading-relaxed">
-        At the core of my interest in AI is an appreciation for data and the stories it can tell. I
-        enjoy digging into data to uncover patterns that lead to meaningful insights, then using
-        those insights as the foundation for building intelligent systems. Whether informing
-        decisions, shaping model behavior, or enabling new forms of interaction, I’m excited by how
-        thoughtfully used data can drive solutions and power AI systems that are both impactful and
-        fun to design.
+        At the core of my interest in AI is an appreciation for data and the stories it can tell.
+        Whether informing decisions, shaping model behavior, or enabling new forms of interaction, 
+        I’m excited by how thoughtfully used data can drive solutions and power AI systems that are 
+        both impactful and fun to design.
       </p>
 
       {/* Contact Information */}
