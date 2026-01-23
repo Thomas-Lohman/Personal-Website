@@ -250,7 +250,7 @@ export default function WorkPage() {
       role: "Data Scientist",
       org: "NASA Sade (Safety-Aware Drone Ecosystem)",
       dates: "Jan 2026 — May 2026",
-      description: "Temporyary Placeholder for Description",
+      description: "",
       bullets: [
         "Building a real-time monitoring system to verify drone behavior and mission compliance when entering regulated and safety-critical airspaces.",
       ],
