@@ -188,11 +188,9 @@ export default function WorkPage() {
         "Machine Learning for Finance",
         "Empirical Finance",
       ],
-      tech: ["Python", "CRSP", "Pandas", "Optimization", "Backtesting"],
+      tech: ["Python", "CRSP", "Pandas", "Optimization", "Backtesting", "PyTorch"],
       links: [
-        { label: "Thesis Proposal", href: "https://example.com/thesis-proposal.pdf" },
-        { label: "Code (Private)", href: "https://github.com/username/thesis-repo" },
-        { label: "CRSP Dataset", href: "https://www.crsp.org/" },
+        { label: "CRSP Dataset Info", href: "https://www.crsp.org/" },
       ],
       featured: true,
     },
@@ -216,9 +214,9 @@ export default function WorkPage() {
       ],
       tech: ["Python", "PyTorch", "Sentence Embeddings", "Evaluation"],
       links: [
-        { label: "Paper (Preprint)", href: "https://arxiv.org/abs/xxxx.xxxxx" },
-        { label: "GitHub", href: "https://github.com/username/abstract-art-llm" },
-        { label: "Poster", href: "https://example.com/poster.pdf" },
+        //{ label: "Paper (Preprint)", href: "https://arxiv.org/abs/xxxx.xxxxx" },
+        //{ label: "GitHub", href: "https://github.com/username/abstract-art-llm" },
+        //{ label: "Poster", href: "https://example.com/poster.pdf" },
       ],
     },
     {
@@ -238,8 +236,6 @@ export default function WorkPage() {
       ],
       tech: ["Python", "Graph Analysis", "NetworkX"],
       links: [
-        { label: "Technical Report", href: "https://example.com/report.pdf" },
-        { label: "Code", href: "https://github.com/username/pub-network-analysis" },
       ],
     },
   ];
@@ -247,12 +243,14 @@ export default function WorkPage() {
   // ---- Internships & Jobs ----
   const experience: Experience[] = [
     {
-      role: "Data Scientist",
+      role: "Machine Learning Engineer",
       org: "NASA Sade (Safety-Aware Drone Ecosystem)",
       dates: "Jan 2026 — May 2026",
       description: "",
       bullets: [
-        "Building a real-time monitoring system to verify drone behavior and mission compliance when entering regulated and safety-critical airspaces.",
+        "Architecting an end-to-end, real-time data ingestion and validation pipeline for autonomous drone mission telemetry using MQTT-based streaming.",
+        "Implementing structured reputation model schemas and automated profile generation to quantify mission compliance and behavioral reliability.",
+        "Engineered automated mission execution pipelines with structured logging to enable reproducible large-scale evaluation of safety-critical drone behaviors and downstream AI agent decision policies.",
       ],
       tech: ["MQTT"],
     },
@@ -267,7 +265,7 @@ export default function WorkPage() {
         "Built logistic regression model to predict primary-customer classification, achieving 85%+ test accuracy.",
         "Analyzed customer transaction behavior over time to identify predictors of future primary-customer status.",
       ],
-      tech: ["Python", "Pandas", "Numpy", "Scikit-learn"],
+      tech: ["Python", "Pandas", "Numpy", "Scikit-learn", "Time-series Analysis", "Statistical Modeling"],
     },
     {
       role: "Technical Market Analyst Intern",
@@ -308,7 +306,8 @@ export default function WorkPage() {
         "Resression Models",
         "Neural Networks",
         "Deep Learning",
-        "Clusterning",
+        "Clustering",
+        "Reinforcement Learning",
       ],
       tech: [
         "Python",
@@ -364,7 +363,7 @@ export default function WorkPage() {
 
         <DropdownSection
           title="Research"
-          subtitle="Research-driven projects with papers, posters, and presentations."
+          subtitle="Research-driven projects and my Master's thesis direction."
         >
           <div className="grid gap-6">
             {research.map((r) => (
@@ -375,7 +374,7 @@ export default function WorkPage() {
 
         <DropdownSection
           title="Jobs and Internships"
-          subtitle="Past jobs and internships involving hands-on technical and analytical work."
+          subtitle="Employment experience involving hands-on technical and analytical work."
         >
           <div className="space-y-4">
             {experience.map((e) => (
