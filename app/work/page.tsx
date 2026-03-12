@@ -1,8 +1,4 @@
-import SectionHeader from "@/components/work/SectionHeader";
-import ProjectCard from "@/components/work/ProjectCard";
-import ResearchCard from "@/components/work/ResearchCard";
-import ExperienceRow from "@/components/work/ExperienceRow";
-import TeachingCard from "@/components/work/TeachingCard";
+import WorkCardLayout from "@/components/work/WorkCardLayout";
 
 import type {
   Experience,
@@ -21,17 +17,27 @@ function DropdownSection({
   children: React.ReactNode;
 }) {
   return (
-    <details className="group space-y-6">
+    <details className="group space-y-5">
       <summary className="list-none cursor-pointer">
         <div className="flex items-start justify-between gap-4">
-          <SectionHeader title={title} subtitle={subtitle} />
+          <div className="space-y-1">
+            <h2 className="font-serif text-xl font-semibold tracking-tight sm:text-2xl">
+              {title}
+            </h2>
+            {subtitle ? (
+              <p className="max-w-3xl text-sm leading-6 opacity-75 sm:text-base">
+                {subtitle}
+              </p>
+            ) : null}
+          </div>
+
           <span className="mt-1 select-none text-lg opacity-70 transition-transform group-open:rotate-180">
             ▾
           </span>
         </div>
       </summary>
 
-      <div className="space-y-6">{children}</div>
+      <div className="space-y-6 pt-1">{children}</div>
     </details>
   );
 }
@@ -46,7 +52,7 @@ export default function WorkPage() {
       description:
         "A full-stack web application providing data-driven NCAA March Madness bracket guidance and predictive insights.",
       bullets: [
-        "Co-founded a full-stack web application for NCAA March Madness bracket guidance and paid picks.",
+        "Building a full-stack web application for NCAA March Madness bracket guidance and paid picks.",
         "Built data pipelines and a Supabase-backed database for team, game, and tournament data.",
         "Trained statistical and machine learning models to predict game outcomes in the bracket.",
         "Integrated predictive insights into interactive matchup and bracket decision tools.",
@@ -62,9 +68,7 @@ export default function WorkPage() {
         "Sklearn",
         "PyTorch",
       ],
-      links: [
-        // { label: "GitHub", href: "https://github.com/Thomas-Lohman/REPO" },
-      ],
+      links: [],
     },
     {
       title: "Multimodal Generative AI System for Effective Language Learning",
@@ -81,13 +85,9 @@ export default function WorkPage() {
         "Large Language Models (LLMs)",
         "Constrained Decoding",
         "AI Systems",
-        "Mistral-7B",
         "Multimodal Systems",
       ],
-      links: [
-        // { label: "Paper", href: "/path-to-paper.pdf" },
-        // { label: "GitHub", href: "https://github.com/Thomas-Lohman/REPO" },
-      ],
+      links: [],
     },
     {
       title: "Homelessness Discourse Retrieval-Augmented Generation System",
@@ -109,9 +109,7 @@ export default function WorkPage() {
         "Vector Databases",
         "Document Embeddings",
       ],
-      links: [
-        // { label: "GitHub", href: "https://github.com/Thomas-Lohman/REPO" },
-      ],
+      links: [],
     },
     {
       title: "Fine-Tuning LLMs for Text-to-Emoji Translation",
@@ -130,9 +128,7 @@ export default function WorkPage() {
         "LoRA",
         "LLMs",
       ],
-      links: [
-        // { label: "GitHub", href: "https://github.com/Thomas-Lohman/REPO" },
-      ],
+      links: [],
     },
     {
       title: "CycleGAN Seasonal Translation Model",
@@ -150,9 +146,7 @@ export default function WorkPage() {
         "Generative Adversarial Networks",
         "Generative AI",
       ],
-      links: [
-        // { label: "GitHub", href: "https://github.com/Thomas-Lohman/REPO" },
-      ],
+      links: [],
     },
     {
       title: "WorNDle — Multilingual Wordle Web Application",
@@ -163,25 +157,30 @@ export default function WorkPage() {
         "Integrated RESTful APIs to support secure purchases of additional plays from a remote server and update access in real time.",
         "Used Django authentication to handle secure signup/login, verification, and reliable session management.",
       ],
-      tech: ["Django", "Bootstrap", "SQLite", "Javascript", "Python", "RESTful APIs"],
-      links: [
-        // { label: "GitHub", href: "https://github.com/Thomas-Lohman/REPO" },
+      tech: [
+        "Django",
+        "Bootstrap",
+        "SQLite",
+        "Javascript",
+        "Python",
+        "RESTful APIs",
       ],
+      links: [],
     },
   ];
 
-  // ---- Research (NEW) ----
+  // ---- Research ----
   const research: ResearchItem[] = [
     {
       title: "Machine Learning for Transaction-Cost-Aware Portfolio Allocation",
       subtitle: "Master’s Thesis Direction · Jun 2025 — Dec 2025",
       description:
-        "Master’s thesis research focused on integrating transaction costs into machine learning–based portfolio optimization to improve net-of-cost performance at scale.",
+        "Master’s thesis research focused on integrating transaction costs into machine learning-based portfolio optimization to improve net-of-cost performance at scale.",
       bullets: [
-        "Designed machine learning–driven portfolio allocation models that explicitly incorporate transaction costs to reduce turnover and slippage.",
+        "Designed machine learning-driven portfolio allocation models that explicitly incorporate transaction costs to reduce turnover and slippage.",
         "Studied the trade-off between expected returns and trading frictions to improve net-of-cost performance for large-scale capital deployment.",
         "Conducted empirical analysis using CRSP equity data to benchmark ML-based strategies against traditional portfolio construction baselines.",
-        "Developed a backtesting framework to evaluate performance, turnover, and stability across market regimes."
+        "Developed a backtesting framework to evaluate performance, turnover, and stability across market regimes.",
       ],
       topics: [
         "Portfolio Optimization",
@@ -189,9 +188,7 @@ export default function WorkPage() {
         "Empirical Finance",
       ],
       tech: ["Python", "CRSP", "Pandas", "Optimization", "Backtesting", "PyTorch"],
-      links: [
-        { label: "CRSP Dataset Info", href: "https://www.crsp.org/" },
-      ],
+      links: [{ label: "CRSP Dataset Info", href: "https://www.crsp.org/" }],
       featured: true,
     },
     {
@@ -203,7 +200,7 @@ export default function WorkPage() {
         "Evaluated multiple open-weight vision-language models on abstract art interpretation using zero- and few-shot in-context learning (0–4 shots).",
         "Designed an evaluation framework measuring both emotion classification accuracy and semantic alignment of model-generated explanations with human annotations.",
         "Used embedding-based cosine similarity to compare model explanations against diverse human-written affective descriptions.",
-        "Found that in-context learning provided minimal improvement over zero-shot performance, while models exhibited latent alignment comparable to human–human agreement in explanation generation."
+        "Found that in-context learning provided minimal improvement over zero-shot performance, while models exhibited latent alignment comparable to human-human agreement in explanation generation.",
       ],
       topics: [
         "Vision-Language Models",
@@ -213,11 +210,7 @@ export default function WorkPage() {
         "Emotion Classification",
       ],
       tech: ["Python", "PyTorch", "Sentence Embeddings", "Evaluation"],
-      links: [
-        //{ label: "Paper (Preprint)", href: "https://arxiv.org/abs/xxxx.xxxxx" },
-        //{ label: "GitHub", href: "https://github.com/username/abstract-art-llm" },
-        //{ label: "Poster", href: "https://example.com/poster.pdf" },
-      ],
+      links: [],
     },
     {
       title: "Publication Network Analysis",
@@ -228,15 +221,11 @@ export default function WorkPage() {
       bullets: [
         "Constructed citation networks from the SciSciNet dataset containing ~2.5 billion rows of publication data.",
         "Developed a methodology for evaluating the similarity of publications to select networks for comparison.",
-        "Analyzed citation graphs using NetworkX, learning how local network structure and citation growth evolve over time."
+        "Analyzed citation graphs using NetworkX, learning how local network structure and citation growth evolve over time.",
       ],
-      topics: [
-        "Network Analysis",
-        "Large-Scale Data",
-      ],
+      topics: ["Network Analysis", "Large-Scale Data"],
       tech: ["Python", "Graph Analysis", "NetworkX"],
-      links: [
-      ],
+      links: [],
     },
   ];
 
@@ -245,7 +234,8 @@ export default function WorkPage() {
     {
       role: "Machine Learning Engineer",
       org: "NASA Sade (Safety-Aware Drone Ecosystem)",
-      dates: "Jan 2026 — May 2026",
+      dates: "",
+      status: "Current",
       description: "",
       bullets: [
         "Architecting an end-to-end, real-time data ingestion and validation pipeline for autonomous drone mission telemetry using MQTT-based streaming.",
@@ -257,7 +247,7 @@ export default function WorkPage() {
     {
       role: "Data Science Intern",
       org: "1st Source Bank",
-      dates: "Jan 2024 — Jul 2024",
+      dates: "",
       description:
         "Applied statistical modeling to large-scale customer and transaction data to support customer segmentation and predictive insights for retail banking.",
       bullets: [
@@ -265,12 +255,19 @@ export default function WorkPage() {
         "Built logistic regression model to predict primary-customer classification, achieving 85%+ test accuracy.",
         "Analyzed customer transaction behavior over time to identify predictors of future primary-customer status.",
       ],
-      tech: ["Python", "Pandas", "Numpy", "Scikit-learn", "Time-series Analysis", "Statistical Modeling"],
+      tech: [
+        "Python",
+        "Pandas",
+        "Numpy",
+        "Scikit-learn",
+        "Time-series Analysis",
+        "Statistical Modeling",
+      ],
     },
     {
       role: "Technical Market Analyst Intern",
       org: "Idea Center, University of Notre Dame",
-      dates: "Aug 2023 — May 2024",
+      dates: "",
       description: "Assess commercialization prospects of professor research and IP.",
       bullets: [
         "Conducted market research to identify commercialization opportunities for faculty research and IP.",
@@ -293,6 +290,7 @@ export default function WorkPage() {
       title: "Intro to Artificial Intelligence — Teaching Assistant",
       org: "University of Notre Dame · CSE Department",
       dates: "May 2024 — May 2026",
+      status: "Current",
       description: "TA for a core junior/senior level AI course.",
       bullets: [
         "Lectured to over 100 students on topics including neural networks, backpropagation, clustering, and dimensionality reduction.",
@@ -324,6 +322,7 @@ export default function WorkPage() {
       title: "Generative AI — Teaching Assistant",
       org: "University of Notre Dame · CSE Department",
       dates: "Jan 2026 — May 2026",
+      status: "Current",
       description: "TA for new GenAI course in Notre Dame engineering school.",
       bullets: [
         "Guided students through a from-scratch implementation of a minimal ChatGPT-style language model, covering tokenization, transformer blocks, training loops, and inference.",
@@ -333,68 +332,108 @@ export default function WorkPage() {
   ];
 
   return (
-    <section className="space-y-14">
-      <header className="space-y-3">
-        <h1 className="text-3xl font-bold">Work</h1>
-        <p className="opacity-80">
-          A selection of past projects, research-driven work, work experience, and teaching experience.
-        </p>
-        <p className="opacity-80">
-          Click the dropdowns below to expand any of the sections :)
-        </p>
-      </header>
+  <section className="space-y-10">
+    <header className="max-w-3xl space-y-3">
+      <h1 className="font-serif text-2xl font-semibold tracking-tight sm:text-3xl">
+        Work
+      </h1>
+      <p className="leading-7 opacity-80">
+        A selection of past projects, research, professional experience, and
+        teaching work.
+      </p>
+      <p className="leading-7 opacity-80">
+        Click the dropdowns below to explore each section.
+      </p>
+    </header>
 
-      <div className="space-y-10">
-        <DropdownSection
-          title="Selected Projects"
-          subtitle="A few projects I thought were interesting."
-        >
-          <div
-            className={
-              "grid gap-6"
-              // + " sm:grid-cols-2"
-            }
-          >
-            {projects.map((p) => (
-              <ProjectCard key={p.title} project={p} />
-            ))}
-          </div>
-        </DropdownSection>
+    <div className="max-w-5xl space-y-8">
 
-        <DropdownSection
-          title="Research"
-          subtitle="Research-driven projects and my Master's thesis direction."
-        >
-          <div className="grid gap-6">
-            {research.map((r) => (
-              <ResearchCard key={r.title} item={r} />
-            ))}
-          </div>
-        </DropdownSection>
+      <DropdownSection
+        title="Jobs and Internships"
+        subtitle="Professional experience involving technical, analytical, and data-driven work."
+      >
+        <div className="space-y-4">
+          {experience.map((e) => (
+            <WorkCardLayout
+              key={`${e.role}-${e.org}-${e.dates}`}
+              title={e.role}
+              meta={[e.org, e.dates].filter(Boolean).join(" · ")}
+              description={e.description}
+              bullets={e.bullets}
+              tech={e.tech}
+              featured={e.featured}
+              status={e.status}
+            />
+          ))}
+        </div>
+      </DropdownSection>
 
-        <DropdownSection
-          title="Jobs and Internships"
-          subtitle="Employment experience involving hands-on technical and analytical work."
-        >
-          <div className="space-y-4">
-            {experience.map((e) => (
-              <ExperienceRow key={`${e.role}-${e.org}-${e.dates}`} exp={e} />
-            ))}
-          </div>
-        </DropdownSection>
+      <DropdownSection
+        title="Research"
+        subtitle="Research-driven projects, academic work, and my master’s thesis direction."
+      >
+        <div className="grid gap-6">
+          {research.map((r) => (
+            <WorkCardLayout
+              key={r.title}
+              title={r.title}
+              meta={r.subtitle}
+              description={r.description}
+              bullets={r.bullets}
+              topics={r.topics}
+              tech={r.tech}
+              links={r.links}
+              featured={r.featured}
+              status={r.status}
+            />
+          ))}
+        </div>
+      </DropdownSection>
 
-        <DropdownSection
-          title="Teaching"
-          subtitle="Teaching roles in artificial intelligence and machine learning."
-        >
-          <div className="grid gap-4">
-            {teaching.map((t) => (
-              <TeachingCard key={`${t.title}-${t.org}-${t.dates}`} item={t} />
-            ))}
-          </div>
-        </DropdownSection>
-      </div>
-    </section>
-  );
+      <DropdownSection
+        title="Selected Projects"
+        subtitle="A few technical projects I thought were especially interesting."
+      >
+        <div className="grid gap-6">
+          {projects.map((p) => (
+            <WorkCardLayout
+              key={p.title}
+              title={p.title}
+              meta={p.meta}
+              description={p.description}
+              bullets={p.bullets}
+              topics={p.topics}
+              tech={p.tech}
+              links={p.links}
+              featured={p.featured}
+              status={p.status}
+            />
+          ))}
+        </div>
+      </DropdownSection>
+
+      <DropdownSection
+        title="Teaching"
+        subtitle="Teaching roles in artificial intelligence, machine learning, and generative AI."
+      >
+        <div className="grid gap-4">
+          {teaching.map((t) => (
+            <WorkCardLayout
+              key={`${t.title}-${t.org}-${t.dates}`}
+              title={t.title}
+              meta={[t.org, t.dates].filter(Boolean).join(" · ")}
+              description={t.description}
+              bullets={t.bullets}
+              topics={t.topics}
+              tech={t.tech}
+              featured={t.featured}
+              status={t.status}
+            />
+          ))}
+        </div>
+      </DropdownSection>
+
+    </div>
+  </section>
+);
 }
-

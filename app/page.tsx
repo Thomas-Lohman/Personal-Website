@@ -1,38 +1,83 @@
 import Image from "next/image";
+import ContactButton from "@/components/ContactButton";
+import { MailIcon, LinkedInIcon, GitHubIcon } from "@/components/Icons";
 
 export default function HomePage() {
   return (
-    <section className="space-y-10">
-      {/* About + Photo (top row) */}
-      <div className="grid gap-10 md:grid-cols-[1.4fr_0.6fr] md:items-start">
-        {/* About (first two paragraphs only) */}
+    <section className="space-y-8">
+      {/* About + Photos */}
+      <div className="grid gap-10 md:grid-cols-[1.3fr_260px] md:items-start">
+        {/* Left Column: About + Contact */}
         <div className="space-y-4">
-          <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            About Me
-          </h1>
+          {/* About */}
+          <div className="space-y-3">
+            <h1 className="font-serif text-2xl font-semibold tracking-tight sm:text-3xl">
+              About Me
+            </h1>
 
-          <p className="opacity-80 max-w-2xl leading-relaxed">
-            I’m a Master’s student in Computer Science and Engineering at the University of Notre Dame,
-            specializing in machine learning and data science. I’m passionate about (1) modeling
-            relationships in data and (2) exploring how deep learning models can learn from and reason
-            with data.
-          </p>
+            <p className="opacity-80 max-w-3xl leading-7">
+              I’m a Master’s student in Computer Science and Engineering at the
+              University of Notre Dame, specializing in machine learning and data
+              science. I’m passionate about (1) modeling relationships in data and
+              (2) exploring how deep learning models can learn from and reason
+              with data.
+            </p>
 
-          <p className="opacity-80 max-w-2xl leading-relaxed">
-            My research focuses on machine learning for portfolio optimization in U.S. equity markets,
-            with additional experience in customer analytics in banking, AI systems in education, ML
-            for art creation, and predictive modeling in sports. I’m driven by curiosity and a desire
-            to build AI systems that are not only accurate and efficient, but also interpretable,
-            adaptable, and impactful in the real world.
-          </p>
+            <p className="opacity-80 max-w-3xl leading-7">
+              My research focuses on machine learning for portfolio optimization
+              in U.S. equity markets, with additional experience in customer
+              analytics in banking, AI systems in education, ML for art creation,
+              and predictive modeling in sports. I’m driven by curiosity and a
+              desire to build AI systems that are not only accurate and efficient,
+              but also interpretable, adaptable, and impactful in the real world.
+            </p>
+
+            <p className="opacity-80 max-w-3xl leading-7">
+              At the core of my interest in AI is an appreciation for data and the
+              stories it can tell. Whether informing decisions, shaping model
+              behavior, or enabling new forms of interaction, I’m excited by how
+              thoughtfully used data can drive solutions and power AI systems that
+              are both impactful and fun to design. 
+            </p>
+          </div>
+
+          {/* Contact */}
+          <div className="max-w-3xl pt-4 space-y-4">
+            <h2 className="font-serif text-2xl font-semibold tracking-tight sm:text-3xl">
+              Contact Information
+            </h2>
+
+            <p className="opacity-80">If you want to reach me:</p>
+
+            <div className="flex flex-wrap gap-4">
+              <ContactButton href="mailto:tlohman@nd.edu">
+                <MailIcon />
+                <span>Gmail</span>
+              </ContactButton>
+
+              <ContactButton
+                href="https://www.linkedin.com/in/thomas-lohman/"
+                external
+              >
+                <LinkedInIcon />
+                <span>LinkedIn</span>
+              </ContactButton>
+
+              <ContactButton href="https://github.com/Thomas-Lohman" external>
+                <GitHubIcon />
+                <span>GitHub</span>
+              </ContactButton>
+            </div>
+          </div>
         </div>
 
-        {/* Photo */}
-        <div className="md:justify-self-end w-full max-w-[320px] mt-6">
+        {/* Right Column: Photos */}
+        <div className="md:justify-self-end w-full max-w-[240px] mt-10 md:mt-14 space-y-4">
+          {/* Professional photo */}
           <div className="overflow-hidden rounded-2xl border shadow-sm">
             <div className="relative aspect-square w-full">
               <Image
-                src="/me.png"
+                src="/me.jpeg"
                 alt="Photo of Thomas Lohman"
                 fill
                 priority
@@ -41,98 +86,21 @@ export default function HomePage() {
               />
             </div>
           </div>
-        </div>
-      </div>
 
-      {/* Full-width third paragraph */}
-      <p className="opacity-80 max-w-4xl leading-relaxed">
-        At the core of my interest in AI is an appreciation for data and the stories it can tell.
-        Whether informing decisions, shaping model behavior, or enabling new forms of interaction, 
-        I’m excited by how thoughtfully used data can drive solutions and power AI systems that are 
-        both impactful and fun to design.
-      </p>
-
-      {/* Contact Information */}
-      <div className="border-t pt-8 space-y-4">
-        <h2 className="text-xl font-semibold tracking-tight">Contact</h2>
-        <p className="opacity-80 max-w-2xl">If you want to reach me:</p>
-
-        <div className="flex flex-wrap gap-4">
-          <a
-            href="mailto:tlohman@nd.edu"
-            className="inline-flex items-center gap-2 rounded-xl border px-4 py-2 text-sm transition hover:bg-foreground/5"
-          >
-            <MailIcon />
-            <span>Gmail</span>
-          </a>
-
-          <a
-            href="https://www.linkedin.com/in/thomas-lohman/"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-xl border px-4 py-2 text-sm transition hover:bg-foreground/5"
-          >
-            <LinkedInIcon />
-            <span>LinkedIn</span>
-          </a>
-
-          <a
-            href="https://github.com/Thomas-Lohman"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-xl border px-4 py-2 text-sm transition hover:bg-foreground/5"
-          >
-            <GitHubIcon />
-            <span>GitHub</span>
-          </a>
+          {/* Jolteon icon */}
+          <div className="overflow-hidden rounded-2xl border shadow-sm">
+            <div className="relative aspect-square w-full">
+              <Image
+                src="/jolteon.png"
+                alt="Jolteon icon"
+                fill
+                className="object-cover select-none"
+                draggable={false}
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>
-  );
-}
-
-/* ---------------- Icons ---------------- */
-
-function MailIcon() {
-  return (
-    <svg
-      aria-hidden
-      viewBox="0 0 24 24"
-      className="h-5 w-5 opacity-80"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <rect x="3" y="5" width="18" height="14" rx="2" />
-      <path d="M3 7l9 6 9-6" />
-    </svg>
-  );
-}
-
-function LinkedInIcon() {
-  return (
-    <svg
-      aria-hidden
-      viewBox="0 0 24 24"
-      className="h-5 w-5 opacity-80"
-      fill="currentColor"
-    >
-      <path d="M4.98 3.5A2.5 2.5 0 002.5 6a2.5 2.5 0 002.48 2.5A2.5 2.5 0 007.5 6a2.5 2.5 0 00-2.52-2.5zM3 9h4v12H3zM9 9h3.8v1.6h.1c.5-.9 1.8-1.8 3.7-1.8 4 0 4.7 2.6 4.7 6v6.2h-4V15c0-1.5 0-3.5-2.1-3.5s-2.4 1.6-2.4 3.4v6.1H9z" />
-    </svg>
-  );
-}
-
-function GitHubIcon() {
-  return (
-    <svg
-      aria-hidden
-      viewBox="0 0 24 24"
-      className="h-5 w-5 opacity-80"
-      fill="currentColor"
-    >
-      <path d="M12 .5a12 12 0 00-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.6-4-1.6-.5-1.3-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1.8 2.3 3.4 1.6.1-.7.4-1.2.7-1.5-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.4 11.4 0 016 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.2 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1 .8 2v3c0 .3.2.7.8.6A12 12 0 0012 .5z" />
-    </svg>
   );
 }

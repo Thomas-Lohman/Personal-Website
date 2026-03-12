@@ -7,9 +7,11 @@ export type Project = {
   description: string;
   bullets: string[];
   tech: string[];
+  topics?: string[];
   links?: LinkItem[];
   featured?: boolean;
   status?: string;
+  meta?: string;
 };
 
 export type ResearchItem = {
@@ -21,6 +23,7 @@ export type ResearchItem = {
   tech?: string[];
   links?: LinkItem[];
   featured?: boolean;
+  status?: string;
 };
 
 export type Experience = {
@@ -30,6 +33,8 @@ export type Experience = {
   description?: string;
   bullets: string[];
   tech?: string[];
+  featured?: boolean;
+  status?: string;
 };
 
 export type TeachingItem = {
@@ -41,4 +46,5 @@ export type TeachingItem = {
   topics?: string[];
   tech?: string[];
   featured?: boolean;
+  status?: string;
 };
