@@ -70,26 +70,7 @@ export default function WorkPage() {
       ],
       links: [],
     },
-    {
-      title: "Multimodal Generative AI System for Effective Language Learning",
-      description:
-        "A multimodal AI system that acts as a dynamic conversational partner for language learners",
-      bullets: [
-        "Designed a modular AI system that enables open-ended, level-appropriate conversation for beginner Spanish learners using constrained decoding.",
-        "Implemented token-level decoding constraints to restrict vocabulary and grammar to CEFR A2 standards while preserving conversational coherence.",
-        "Integrated real-time English translation to support comprehension during live foreign-language interaction.",
-        "Developed a multimodal pipeline that extracts keywords from conversation turns and generates contextual images to reinforce word-to-picture associations.",
-      ],
-      tech: [
-        "Python",
-        "Large Language Models (LLMs)",
-        "Constrained Decoding",
-        "AI Systems",
-        "Multimodal Systems",
-      ],
-      links: [],
-    },
-    {
+        {
       title: "Homelessness Discourse Retrieval-Augmented Generation System",
       description:
         "An AI-for-social-good project using retrieval-augmented generation to provide fact-grounded, cited responses to questions about homelessness in the United States.",
@@ -108,6 +89,25 @@ export default function WorkPage() {
         "Chainlit",
         "Vector Databases",
         "Document Embeddings",
+      ],
+      links: [{ label: "Github Repository", href: "https://github.com/Thomas-Lohman/homelessness-discourse-rag-chatbot" }],
+    },
+    {
+      title: "Multimodal Generative AI System for Effective Language Learning",
+      description:
+        "A multimodal AI system that acts as a dynamic conversational partner for language learners",
+      bullets: [
+        "Designed a modular AI system that enables open-ended, level-appropriate conversation for beginner Spanish learners using constrained decoding.",
+        "Implemented token-level decoding constraints to restrict vocabulary and grammar to CEFR A2 standards while preserving conversational coherence.",
+        "Integrated real-time English translation to support comprehension during live foreign-language interaction.",
+        "Developed a multimodal pipeline that extracts keywords from conversation turns and generates contextual images to reinforce word-to-picture associations.",
+      ],
+      tech: [
+        "Python",
+        "Large Language Models (LLMs)",
+        "Constrained Decoding",
+        "AI Systems",
+        "Multimodal Systems",
       ],
       links: [],
     },
