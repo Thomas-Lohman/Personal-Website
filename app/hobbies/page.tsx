@@ -147,13 +147,25 @@ export default function HobbiesPage() {
         </div>
       </section>
 
+      {/* Volleyball */}
+      <section className="space-y-3">
+        <h2 className="font-serif text-xl font-semibold tracking-tight sm:text-2xl">
+          Volleyball
+        </h2>
+        <p className="max-w-3xl leading-7 opacity-80">
+          I’ve played volleyball for over a decade, with the majority of my time in indoor leagues and tournaments.
+          I also love beach and grass. After graduating from my master’s program, I’m hoping to join a beach or grass 
+          league in whichever city I end up in.
+        </p>
+      </section>
+
       {/* YouTube Channel */}
       <section className="space-y-3">
         <h2 className="font-serif text-xl font-semibold tracking-tight sm:text-2xl">
           YouTube: Teaching AI
         </h2>
         <p className="max-w-3xl leading-7 opacity-80">
-          A planned YouTube channel focused on teaching AI and machine learning
+          A YouTube channel focused on teaching AI and machine learning
           concepts in a clear, intuitive, and example-driven way.
         </p>
         <p className="text-sm opacity-60">More content coming soon.</p>

@@ -48,7 +48,7 @@ export default function WorkPage() {
     {
       title: "March Madness Analytics Web Application",
       status: "Current",
-      featured: true,
+      featured: false,
       description:
         "A full-stack web application providing data-driven NCAA March Madness bracket guidance and predictive insights.",
       bullets: [
@@ -63,7 +63,7 @@ export default function WorkPage() {
         "Typescript",
         "SQL",
         "Relational Databases",
-        "Vercel",
+        "Vector Databases",
         "Pandas",
         "Sklearn",
         "PyTorch",
@@ -182,13 +182,11 @@ export default function WorkPage() {
         "Conducted empirical analysis using CRSP equity data to benchmark ML-based strategies against traditional portfolio construction baselines.",
         "Developed a backtesting framework to evaluate performance, turnover, and stability across market regimes.",
       ],
-      topics: [
-        "Portfolio Optimization",
-        "Machine Learning for Finance",
-        "Empirical Finance",
+      topics: [],
+      tech: ["Python", "CRSP", "Pandas", "Portfolio Optimization", "Backtesting", "PyTorch", "Empirical Finance"],
+      links: [{ label: "CRSP Dataset Info", href: "https://www.crsp.org/" },
+              { label: "AQR paper this research is based on", href: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4187217" }
       ],
-      tech: ["Python", "CRSP", "Pandas", "Optimization", "Backtesting", "PyTorch"],
-      links: [{ label: "CRSP Dataset Info", href: "https://www.crsp.org/" }],
       featured: true,
     },
     {
@@ -202,15 +200,11 @@ export default function WorkPage() {
         "Used embedding-based cosine similarity to compare model explanations against diverse human-written affective descriptions.",
         "Found that in-context learning provided minimal improvement over zero-shot performance, while models exhibited latent alignment comparable to human-human agreement in explanation generation.",
       ],
-      topics: [
-        "Vision-Language Models",
-        "LLMs",
-        "In-Context Learning",
-        "Evaluation",
-        "Emotion Classification",
+      topics: [],
+      tech: ["Python", "Hugging Face", "Transformers", "Embedding Models","PyTorch", "Sentence Embeddings", "LLMs", "VLMs", "In-Context Learning",],
+      links: [{ label: "Github Repository", href: "https://github.com/Thomas-Lohman/LLMs-absract-art-analysis" },
+              { label: "Dataset used for this research", href: "https://arxiv.org/abs/2101.07396" },
       ],
-      tech: ["Python", "PyTorch", "Sentence Embeddings", "Evaluation"],
-      links: [],
     },
     {
       title: "Publication Network Analysis",
@@ -223,8 +217,8 @@ export default function WorkPage() {
         "Developed a methodology for evaluating the similarity of publications to select networks for comparison.",
         "Analyzed citation graphs using NetworkX, learning how local network structure and citation growth evolve over time.",
       ],
-      topics: ["Network Analysis", "Large-Scale Data"],
-      tech: ["Python", "Graph Analysis", "NetworkX"],
+      topics: [],
+      tech: ["Python", "Graph Analysis", "NetworkX", "Large-Scale Data Processing"],
       links: [],
     },
   ];
@@ -242,7 +236,7 @@ export default function WorkPage() {
         "Implementing structured reputation model schemas and automated profile generation to quantify mission compliance and behavioral reliability.",
         "Engineered automated mission execution pipelines with structured logging to enable reproducible large-scale evaluation of safety-critical drone behaviors and downstream AI agent decision policies.",
       ],
-      tech: ["MQTT"],
+      tech: ["Python", "MQTT", "Data Engineering", "AWS", "Data Pipelines", "Event-Driven Architectures", "Async Programming"],
     },
     {
       role: "Data Science Intern",
@@ -289,12 +283,13 @@ export default function WorkPage() {
     {
       title: "Intro to Artificial Intelligence — Teaching Assistant",
       org: "University of Notre Dame · CSE Department",
-      dates: "May 2024 — May 2026",
+      dates: "",
       status: "Current",
       description: "TA for a core junior/senior level AI course.",
       bullets: [
         "Lectured to over 100 students on topics including neural networks, backpropagation, clustering, and dimensionality reduction.",
         "Co-designed a series of programming assignments covering AI search, Bayesian statistics, classical machine learning, deep learning foundations, and transformer architectures.",
+        "Topics: AI Search, Bayesian Statistics, Markov Models, Decision Trees, SVMs, Regression Models, Dimensionality Reduction, Neural Networks, Deep Learning, Clustering, Reinforcement Learning.",
       ],
       topics: [
         "AI Search",
@@ -321,7 +316,7 @@ export default function WorkPage() {
     {
       title: "Generative AI — Teaching Assistant",
       org: "University of Notre Dame · CSE Department",
-      dates: "Jan 2026 — May 2026",
+      dates: "",
       status: "Current",
       description: "TA for new GenAI course in Notre Dame engineering school.",
       bullets: [
