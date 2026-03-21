@@ -17,9 +17,9 @@ function DropdownSection({
   children: React.ReactNode;
 }) {
   return (
-    <details className="group space-y-5">
-      <summary className="list-none cursor-pointer">
-        <div className="flex items-start justify-between gap-4">
+    <details className="group space-y-2 bg-transparent">
+      <summary className="list-none cursor-pointer bg-transparent">
+        <div className="flex items-center justify-between gap-4 rounded-xl border border-slate-100 bg-white px-4 py-3 transition hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-900/50 dark:hover:bg-slate-800/60">
           <div className="space-y-1">
             <h2 className="font-serif text-xl font-semibold tracking-tight sm:text-2xl">
               {title}
@@ -31,13 +31,13 @@ function DropdownSection({
             ) : null}
           </div>
 
-          <span className="mt-1 select-none text-lg opacity-70 transition-transform group-open:rotate-180">
+          <span className="flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 bg-white text-lg font-semibold text-slate-700 shadow-sm transition-all duration-150 group-open:-rotate-180 dark:border-slate-600 dark:bg-slate-800/70 dark:text-slate-300">
             ▾
           </span>
         </div>
       </summary>
 
-      <div className="space-y-6 pt-1">{children}</div>
+      <div className="space-y-6 pt-4">{children}</div>
     </details>
   );
 }
@@ -322,7 +322,7 @@ export default function WorkPage() {
       bullets: [
         "Guided students through a from-scratch implementation of a minimal ChatGPT-style language model, covering tokenization, transformer blocks, training loops, and inference.",
       ],
-      tech: ["Python", "Deep Learning", "Generative Models", "LLMs"],
+      tech: ["Python", "Deep Learning", "Transformers", "Self-Attention", "Tokenization (BPE, GPT)", "Large Language Models (LLMs)", "Prompt Engineering", "LLM Evaluation", "AI Alignment", "Agentic AI", "Multimodal Models"],
     },
   ];
 
@@ -345,7 +345,7 @@ export default function WorkPage() {
 
       <DropdownSection
         title="Jobs and Internships"
-        subtitle="Professional experience involving technical, analytical, and data-driven work."
+        subtitle="Professional experience involving data-driven modeling, research, and analytical work."
       >
         <div className="space-y-4">
           {experience.map((e) => (
@@ -387,7 +387,7 @@ export default function WorkPage() {
 
       <DropdownSection
         title="Selected Projects"
-        subtitle="A few technical projects I thought were especially interesting."
+        subtitle="A few projects I thought were especially interesting."
       >
         <div className="grid gap-6">
           {projects.map((p) => (

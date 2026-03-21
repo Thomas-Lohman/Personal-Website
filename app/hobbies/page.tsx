@@ -9,7 +9,7 @@ export default function HobbiesPage() {
         </h1>
 
         <p className="max-w-3xl leading-7 opacity-80">
-          A few things I enjoy working on outside of research and coursework.
+          A few things I enjoy working on outside of research and work.
         </p>
       </header>
 
