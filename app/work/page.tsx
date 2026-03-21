@@ -128,7 +128,7 @@ export default function WorkPage() {
         "LoRA",
         "LLMs",
       ],
-      links: [],
+      links: [{ label: "Github Repository", href: "https://github.com/Thomas-Lohman/CSE40625-Machine-Learning" }],
     },
     {
       title: "CycleGAN Seasonal Translation Model",
@@ -146,7 +146,7 @@ export default function WorkPage() {
         "Generative Adversarial Networks",
         "Generative AI",
       ],
-      links: [],
+      links: [{ label: "Github Repository", href: "https://github.com/Thomas-Lohman/CSE40625-Machine-Learning" }],
     },
     {
       title: "WorNDle — Multilingual Wordle Web Application",
