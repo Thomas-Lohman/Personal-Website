@@ -75,9 +75,9 @@ export default function HomePage() {
         <div className="md:justify-self-end w-full max-w-[240px] mt-10 md:mt-14 space-y-4">
           {/* Professional photo */}
           <div className="overflow-hidden rounded-2xl border shadow-sm">
-            <div className="relative aspect-square w-full">
+            <div className="relative aspect-[3/4] w-full">
               <Image
-                src="/me.jpeg"
+                src="/me.png"
                 alt="Photo of Thomas Lohman"
                 fill
                 priority
