@@ -16,28 +16,27 @@ export default function HomePage() {
             </h1>
 
             <p className="opacity-80 max-w-3xl leading-7">
-              I’m a Master’s student in Computer Science and Engineering at the
-              University of Notre Dame, specializing in machine learning and data
-              science. I’m passionate about (1) modeling relationships in data and
-              (2) exploring how deep learning models can learn from and reason
-              with data.
+
+              I’m a Master’s student studying computer science at the University of Notre Dame, 
+              specializing in machine learning and data science. I’m interested in building intelligent 
+              systems that turn data into insights which drive decision-making at scale. 
             </p>
 
             <p className="opacity-80 max-w-3xl leading-7">
-              My research focuses on machine learning for portfolio optimization
-              in U.S. equity markets, with additional experience in customer
-              analytics in banking, AI systems in education, ML for art creation,
-              and predictive modeling in sports. I’m driven by curiosity and a
-              desire to build AI systems that are not only accurate and efficient,
-              but also interpretable, adaptable, and impactful in the real world.
+              I’m passionate about three core areas: (1) modeling relationships in data, 
+              (2) building efficient data infrastructure that enables end-to-end AI solutions, 
+              and (3) exploring how deep learning models learn from and reason with data. 
+              I enjoy working across the full lifecycle of AI systems and am always eager to learn about new tools, 
+              techniques, and applications in the field. I have experience in data engineering, data science, 
+              and machine learning engineering across a variety of domains, including finance, customer analytics, 
+              education, art, and sports.
             </p>
 
             <p className="opacity-80 max-w-3xl leading-7">
-              At the core of my interest in AI is an appreciation for data and the
-              stories it can tell. Whether informing decisions, shaping model
-              behavior, or enabling new forms of interaction, I’m excited by how
-              thoughtfully used data can drive solutions and power AI systems that
-              are both impactful and fun to design. 
+              At the core of my interest in AI is an appreciation for data and the stories it can tell. 
+              I’m motivated by curiosity and a desire to solve complex problems at the intersection 
+              of data, AI, and software. My passion for AI/ML continues to drive me to learn, 
+              build, and grow as the field evolves.
             </p>
           </div>
 
